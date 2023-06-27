@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace QLTTBCNTT_WinForm.Object
 {
-    internal class DMTB
+    internal class Thietbi
     {
         private int idThietbi, idloaiTB, idQuannhan, idDonvi;
         private string TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor;
 
-        public DMTB()
+        public Thietbi()
         {
         }
 
-        public DMTB(string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
+        public Thietbi(string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
         {
             TenTB = tenTB;
             Seri = seri;
@@ -26,7 +26,7 @@ namespace QLTTBCNTT_WinForm.Object
             Monitor = monitor;
         }
 
-        public DMTB(/*int idThietbi,*/ int idloaiTB, int idQuannhan, int idDonvi, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
+        public Thietbi(/*int idThietbi,*/ int idloaiTB, int idQuannhan, int idDonvi, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
         {
             //this.idThietbi = idThietbi;
             this.idloaiTB = idloaiTB;

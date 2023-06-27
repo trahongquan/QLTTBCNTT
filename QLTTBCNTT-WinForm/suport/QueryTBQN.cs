@@ -41,7 +41,7 @@ namespace QLTTBCNTT_WinForm.suport
             return bangXM;
         }
 
-        public void Insert(TBDonvi TBDV) // them
+        public void Insert(TBQN TBQN) // them
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "Insert into TB_QN values " +
@@ -51,10 +51,10 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlConnection.Open();
 
                 sqlCMD = new SqlCommand(query, sqlConnection);
-                sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = TBDV.IdDonvi;   // gan cu the
-                sqlCMD.Parameters.Add("@idThietbi", SqlDbType.NChar).Value = TBDV.IdThietbi;
-                sqlCMD.Parameters.Add("@DateBorrow", SqlDbType.NChar).Value = TBDV.DateBorrow1;
-                sqlCMD.Parameters.Add("@DateReturn", SqlDbType.NChar).Value = TBDV.DateReturn1;
+                sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = TBQN.IdQuannhan;   // gan cu the
+                sqlCMD.Parameters.Add("@idThietbi", SqlDbType.NChar).Value = TBQN.IdThietbi;
+                sqlCMD.Parameters.Add("@DateBorrow", SqlDbType.NChar).Value = TBQN.DateBorrow1;
+                sqlCMD.Parameters.Add("@DateReturn", SqlDbType.NChar).Value = TBQN.DateRrturn1;
 
                 sqlCMD.ExecuteNonQuery();
             }
@@ -67,21 +67,21 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlConnection.Close();
             }
         }
-        public void Modify(TBDonvi TBDV, int IdTBDonvi) // sua theo TT
+        public void Modify(TBQN TBQN, int IdTBQN) // sua theo TT
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "UPDATE TB_QN SET " +
                 "idQuannhan=@idQuannhan, idThietbi=@idThietbi, DateBorrow=@DateBorrow, DateReturn=@DateReturn" +
-                "Where IdThieBi = " + IdTBDonvi;
+                "Where IdThieBi = " + IdTBQN;
             try
             {
                 sqlConnection.Open();
 
                 sqlCMD = new SqlCommand(query, sqlConnection);
-                sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = TBDV.IdDonvi;   // gan cu the
-                sqlCMD.Parameters.Add("@idThietbi", SqlDbType.NChar).Value = TBDV.IdThietbi;
-                sqlCMD.Parameters.Add("@DateBorrow", SqlDbType.NChar).Value = TBDV.DateBorrow1;
-                sqlCMD.Parameters.Add("@DateReturn", SqlDbType.NChar).Value = TBDV.DateReturn1;
+                sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = TBQN.IdQuannhan;   // gan cu the
+                sqlCMD.Parameters.Add("@idThietbi", SqlDbType.NChar).Value = TBQN.IdThietbi;
+                sqlCMD.Parameters.Add("@DateBorrow", SqlDbType.NChar).Value = TBQN.DateBorrow1;
+                sqlCMD.Parameters.Add("@DateReturn", SqlDbType.NChar).Value = TBQN.DateRrturn1;
 
                 sqlCMD.ExecuteNonQuery();
             }
@@ -118,6 +118,56 @@ namespace QLTTBCNTT_WinForm.suport
             {
                 sqlConnection.Close();
             }
+        }
+        #endregion
+        #region query TB, ĐV theo id
+        public string getTBDV_idTB(string idTB)
+        {
+            DataSet bangTB = new DataSet();
+            string query = "select TenTB from DM_ThietBi " +
+                            "where IdThietBi = " + idTB;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangTB);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            string DV;
+            DV = bangTB.Tables[0].Rows[0][0].ToString();
+            return DV;
+        }
+        public string getTBDV_idDV(string idDonvi)
+        {
+            DataSet bangDV = new DataSet();
+            string query = "select Doi, TieuDoan, LuDoan from DM_Donvi " +
+                            "where IdDonvi = " + idDonvi;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            string DV;
+            DV = bangDV.Tables[0].Rows[0][0].ToString() + ", " + bangDV.Tables[0].Rows[0][1].ToString() + ", " + bangDV.Tables[0].Rows[0][2].ToString();
+            return DV;
         }
         #endregion
     }

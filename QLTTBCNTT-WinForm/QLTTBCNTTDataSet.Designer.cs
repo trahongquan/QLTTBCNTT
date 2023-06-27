@@ -24,7 +24,7 @@ namespace QLTTBCNTT_WinForm {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class QLTTBCNTTDataSet : global::System.Data.DataSet {
         
-        private DM_ThietBiDataTable tableDM_ThietBi;
+        private DM_DonviDataTable tableDM_Donvi;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace QLTTBCNTT_WinForm {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["DM_ThietBi"] != null)) {
-                    base.Tables.Add(new DM_ThietBiDataTable(ds.Tables["DM_ThietBi"]));
+                if ((ds.Tables["DM_Donvi"] != null)) {
+                    base.Tables.Add(new DM_DonviDataTable(ds.Tables["DM_Donvi"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace QLTTBCNTT_WinForm {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DM_ThietBiDataTable DM_ThietBi {
+        public DM_DonviDataTable DM_Donvi {
             get {
-                return this.tableDM_ThietBi;
+                return this.tableDM_Donvi;
             }
         }
         
@@ -152,8 +152,8 @@ namespace QLTTBCNTT_WinForm {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["DM_ThietBi"] != null)) {
-                    base.Tables.Add(new DM_ThietBiDataTable(ds.Tables["DM_ThietBi"]));
+                if ((ds.Tables["DM_Donvi"] != null)) {
+                    base.Tables.Add(new DM_DonviDataTable(ds.Tables["DM_Donvi"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace QLTTBCNTT_WinForm {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableDM_ThietBi = ((DM_ThietBiDataTable)(base.Tables["DM_ThietBi"]));
+            this.tableDM_Donvi = ((DM_DonviDataTable)(base.Tables["DM_Donvi"]));
             if ((initTable == true)) {
-                if ((this.tableDM_ThietBi != null)) {
-                    this.tableDM_ThietBi.InitVars();
+                if ((this.tableDM_Donvi != null)) {
+                    this.tableDM_Donvi.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace QLTTBCNTT_WinForm {
             this.Namespace = "http://tempuri.org/QLTTBCNTTDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableDM_ThietBi = new DM_ThietBiDataTable();
-            base.Tables.Add(this.tableDM_ThietBi);
+            this.tableDM_Donvi = new DM_DonviDataTable();
+            base.Tables.Add(this.tableDM_Donvi);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeDM_ThietBi() {
+        private bool ShouldSerializeDM_Donvi() {
             return false;
         }
         
@@ -270,41 +270,27 @@ namespace QLTTBCNTT_WinForm {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void DM_ThietBiRowChangeEventHandler(object sender, DM_ThietBiRowChangeEvent e);
+        public delegate void DM_DonviRowChangeEventHandler(object sender, DM_DonviRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DM_ThietBiDataTable : global::System.Data.TypedTableBase<DM_ThietBiRow> {
+        public partial class DM_DonviDataTable : global::System.Data.TypedTableBase<DM_DonviRow> {
             
-            private global::System.Data.DataColumn columnIdThietBi;
+            private global::System.Data.DataColumn columnIdDonvi;
             
-            private global::System.Data.DataColumn columnidLoaiTB;
+            private global::System.Data.DataColumn columnDoi;
             
-            private global::System.Data.DataColumn columnTenTB;
+            private global::System.Data.DataColumn columnTieuDoan;
             
-            private global::System.Data.DataColumn columnSeri;
-            
-            private global::System.Data.DataColumn columnMAC;
-            
-            private global::System.Data.DataColumn columnCoreCPU;
-            
-            private global::System.Data.DataColumn columnRAM;
-            
-            private global::System.Data.DataColumn columnHardDisk;
-            
-            private global::System.Data.DataColumn columnMonitor;
-            
-            private global::System.Data.DataColumn columnidQuannhan;
-            
-            private global::System.Data.DataColumn columnidDonvi;
+            private global::System.Data.DataColumn columnLuDoan;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiDataTable() {
-                this.TableName = "DM_ThietBi";
+            public DM_DonviDataTable() {
+                this.TableName = "DM_Donvi";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -312,7 +298,7 @@ namespace QLTTBCNTT_WinForm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DM_ThietBiDataTable(global::System.Data.DataTable table) {
+            internal DM_DonviDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -329,96 +315,40 @@ namespace QLTTBCNTT_WinForm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected DM_ThietBiDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected DM_DonviDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn IdThietBiColumn {
+            public global::System.Data.DataColumn IdDonviColumn {
                 get {
-                    return this.columnIdThietBi;
+                    return this.columnIdDonvi;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idLoaiTBColumn {
+            public global::System.Data.DataColumn DoiColumn {
                 get {
-                    return this.columnidLoaiTB;
+                    return this.columnDoi;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn TenTBColumn {
+            public global::System.Data.DataColumn TieuDoanColumn {
                 get {
-                    return this.columnTenTB;
+                    return this.columnTieuDoan;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn SeriColumn {
+            public global::System.Data.DataColumn LuDoanColumn {
                 get {
-                    return this.columnSeri;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MACColumn {
-                get {
-                    return this.columnMAC;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CoreCPUColumn {
-                get {
-                    return this.columnCoreCPU;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn RAMColumn {
-                get {
-                    return this.columnRAM;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn HardDiskColumn {
-                get {
-                    return this.columnHardDisk;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn MonitorColumn {
-                get {
-                    return this.columnMonitor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idQuannhanColumn {
-                get {
-                    return this.columnidQuannhan;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn idDonviColumn {
-                get {
-                    return this.columnidDonvi;
+                    return this.columnLuDoan;
                 }
             }
             
@@ -433,62 +363,55 @@ namespace QLTTBCNTT_WinForm {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRow this[int index] {
+            public DM_DonviRow this[int index] {
                 get {
-                    return ((DM_ThietBiRow)(this.Rows[index]));
+                    return ((DM_DonviRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DM_ThietBiRowChangeEventHandler DM_ThietBiRowChanging;
+            public event DM_DonviRowChangeEventHandler DM_DonviRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DM_ThietBiRowChangeEventHandler DM_ThietBiRowChanged;
+            public event DM_DonviRowChangeEventHandler DM_DonviRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DM_ThietBiRowChangeEventHandler DM_ThietBiRowDeleting;
+            public event DM_DonviRowChangeEventHandler DM_DonviRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event DM_ThietBiRowChangeEventHandler DM_ThietBiRowDeleted;
+            public event DM_DonviRowChangeEventHandler DM_DonviRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddDM_ThietBiRow(DM_ThietBiRow row) {
+            public void AddDM_DonviRow(DM_DonviRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRow AddDM_ThietBiRow(int idLoaiTB, string TenTB, string Seri, string MAC, string CoreCPU, string RAM, string HardDisk, string Monitor, int idQuannhan, int idDonvi) {
-                DM_ThietBiRow rowDM_ThietBiRow = ((DM_ThietBiRow)(this.NewRow()));
+            public DM_DonviRow AddDM_DonviRow(string Doi, string TieuDoan, string LuDoan) {
+                DM_DonviRow rowDM_DonviRow = ((DM_DonviRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        idLoaiTB,
-                        TenTB,
-                        Seri,
-                        MAC,
-                        CoreCPU,
-                        RAM,
-                        HardDisk,
-                        Monitor,
-                        idQuannhan,
-                        idDonvi};
-                rowDM_ThietBiRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDM_ThietBiRow);
-                return rowDM_ThietBiRow;
+                        Doi,
+                        TieuDoan,
+                        LuDoan};
+                rowDM_DonviRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowDM_DonviRow);
+                return rowDM_DonviRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRow FindByIdThietBi(int IdThietBi) {
-                return ((DM_ThietBiRow)(this.Rows.Find(new object[] {
-                            IdThietBi})));
+            public DM_DonviRow FindByIdDonvi(int IdDonvi) {
+                return ((DM_DonviRow)(this.Rows.Find(new object[] {
+                            IdDonvi})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DM_ThietBiDataTable cln = ((DM_ThietBiDataTable)(base.Clone()));
+                DM_DonviDataTable cln = ((DM_DonviDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -496,92 +419,67 @@ namespace QLTTBCNTT_WinForm {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DM_ThietBiDataTable();
+                return new DM_DonviDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnIdThietBi = base.Columns["IdThietBi"];
-                this.columnidLoaiTB = base.Columns["idLoaiTB"];
-                this.columnTenTB = base.Columns["TenTB"];
-                this.columnSeri = base.Columns["Seri"];
-                this.columnMAC = base.Columns["MAC"];
-                this.columnCoreCPU = base.Columns["CoreCPU"];
-                this.columnRAM = base.Columns["RAM"];
-                this.columnHardDisk = base.Columns["HardDisk"];
-                this.columnMonitor = base.Columns["Monitor"];
-                this.columnidQuannhan = base.Columns["idQuannhan"];
-                this.columnidDonvi = base.Columns["idDonvi"];
+                this.columnIdDonvi = base.Columns["IdDonvi"];
+                this.columnDoi = base.Columns["Doi"];
+                this.columnTieuDoan = base.Columns["TieuDoan"];
+                this.columnLuDoan = base.Columns["LuDoan"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnIdThietBi = new global::System.Data.DataColumn("IdThietBi", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnIdThietBi);
-                this.columnidLoaiTB = new global::System.Data.DataColumn("idLoaiTB", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidLoaiTB);
-                this.columnTenTB = new global::System.Data.DataColumn("TenTB", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTenTB);
-                this.columnSeri = new global::System.Data.DataColumn("Seri", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSeri);
-                this.columnMAC = new global::System.Data.DataColumn("MAC", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMAC);
-                this.columnCoreCPU = new global::System.Data.DataColumn("CoreCPU", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCoreCPU);
-                this.columnRAM = new global::System.Data.DataColumn("RAM", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRAM);
-                this.columnHardDisk = new global::System.Data.DataColumn("HardDisk", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnHardDisk);
-                this.columnMonitor = new global::System.Data.DataColumn("Monitor", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnMonitor);
-                this.columnidQuannhan = new global::System.Data.DataColumn("idQuannhan", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidQuannhan);
-                this.columnidDonvi = new global::System.Data.DataColumn("idDonvi", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidDonvi);
+                this.columnIdDonvi = new global::System.Data.DataColumn("IdDonvi", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnIdDonvi);
+                this.columnDoi = new global::System.Data.DataColumn("Doi", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDoi);
+                this.columnTieuDoan = new global::System.Data.DataColumn("TieuDoan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTieuDoan);
+                this.columnLuDoan = new global::System.Data.DataColumn("LuDoan", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLuDoan);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnIdThietBi}, true));
-                this.columnIdThietBi.AutoIncrement = true;
-                this.columnIdThietBi.AutoIncrementSeed = -1;
-                this.columnIdThietBi.AutoIncrementStep = -1;
-                this.columnIdThietBi.AllowDBNull = false;
-                this.columnIdThietBi.ReadOnly = true;
-                this.columnIdThietBi.Unique = true;
-                this.columnTenTB.MaxLength = 50;
-                this.columnSeri.AllowDBNull = false;
-                this.columnSeri.MaxLength = 50;
-                this.columnMAC.MaxLength = 50;
-                this.columnCoreCPU.MaxLength = 50;
-                this.columnRAM.MaxLength = 50;
-                this.columnHardDisk.MaxLength = 50;
-                this.columnMonitor.MaxLength = 50;
+                                this.columnIdDonvi}, true));
+                this.columnIdDonvi.AutoIncrement = true;
+                this.columnIdDonvi.AutoIncrementSeed = -1;
+                this.columnIdDonvi.AutoIncrementStep = -1;
+                this.columnIdDonvi.AllowDBNull = false;
+                this.columnIdDonvi.ReadOnly = true;
+                this.columnIdDonvi.Unique = true;
+                this.columnDoi.MaxLength = 50;
+                this.columnTieuDoan.MaxLength = 50;
+                this.columnLuDoan.AllowDBNull = false;
+                this.columnLuDoan.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRow NewDM_ThietBiRow() {
-                return ((DM_ThietBiRow)(this.NewRow()));
+            public DM_DonviRow NewDM_DonviRow() {
+                return ((DM_DonviRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DM_ThietBiRow(builder);
+                return new DM_DonviRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DM_ThietBiRow);
+                return typeof(DM_DonviRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DM_ThietBiRowChanged != null)) {
-                    this.DM_ThietBiRowChanged(this, new DM_ThietBiRowChangeEvent(((DM_ThietBiRow)(e.Row)), e.Action));
+                if ((this.DM_DonviRowChanged != null)) {
+                    this.DM_DonviRowChanged(this, new DM_DonviRowChangeEvent(((DM_DonviRow)(e.Row)), e.Action));
                 }
             }
             
@@ -589,8 +487,8 @@ namespace QLTTBCNTT_WinForm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DM_ThietBiRowChanging != null)) {
-                    this.DM_ThietBiRowChanging(this, new DM_ThietBiRowChangeEvent(((DM_ThietBiRow)(e.Row)), e.Action));
+                if ((this.DM_DonviRowChanging != null)) {
+                    this.DM_DonviRowChanging(this, new DM_DonviRowChangeEvent(((DM_DonviRow)(e.Row)), e.Action));
                 }
             }
             
@@ -598,8 +496,8 @@ namespace QLTTBCNTT_WinForm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DM_ThietBiRowDeleted != null)) {
-                    this.DM_ThietBiRowDeleted(this, new DM_ThietBiRowChangeEvent(((DM_ThietBiRow)(e.Row)), e.Action));
+                if ((this.DM_DonviRowDeleted != null)) {
+                    this.DM_DonviRowDeleted(this, new DM_DonviRowChangeEvent(((DM_DonviRow)(e.Row)), e.Action));
                 }
             }
             
@@ -607,14 +505,14 @@ namespace QLTTBCNTT_WinForm {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DM_ThietBiRowDeleting != null)) {
-                    this.DM_ThietBiRowDeleting(this, new DM_ThietBiRowChangeEvent(((DM_ThietBiRow)(e.Row)), e.Action));
+                if ((this.DM_DonviRowDeleting != null)) {
+                    this.DM_DonviRowDeleting(this, new DM_DonviRowChangeEvent(((DM_DonviRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveDM_ThietBiRow(DM_ThietBiRow row) {
+            public void RemoveDM_DonviRow(DM_DonviRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -641,7 +539,7 @@ namespace QLTTBCNTT_WinForm {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DM_ThietBiDataTable";
+                attribute2.FixedValue = "DM_DonviDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -685,289 +583,93 @@ namespace QLTTBCNTT_WinForm {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DM_ThietBiRow : global::System.Data.DataRow {
+        public partial class DM_DonviRow : global::System.Data.DataRow {
             
-            private DM_ThietBiDataTable tableDM_ThietBi;
+            private DM_DonviDataTable tableDM_Donvi;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal DM_ThietBiRow(global::System.Data.DataRowBuilder rb) : 
+            internal DM_DonviRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDM_ThietBi = ((DM_ThietBiDataTable)(this.Table));
+                this.tableDM_Donvi = ((DM_DonviDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int IdThietBi {
+            public int IdDonvi {
                 get {
-                    return ((int)(this[this.tableDM_ThietBi.IdThietBiColumn]));
+                    return ((int)(this[this.tableDM_Donvi.IdDonviColumn]));
                 }
                 set {
-                    this[this.tableDM_ThietBi.IdThietBiColumn] = value;
+                    this[this.tableDM_Donvi.IdDonviColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int idLoaiTB {
-                get {
-                    try {
-                        return ((int)(this[this.tableDM_ThietBi.idLoaiTBColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idLoaiTB\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.idLoaiTBColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string TenTB {
+            public string Doi {
                 get {
                     try {
-                        return ((string)(this[this.tableDM_ThietBi.TenTBColumn]));
+                        return ((string)(this[this.tableDM_Donvi.DoiColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'TenTB\' in table \'DM_ThietBi\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'Doi\' in table \'DM_Donvi\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDM_ThietBi.TenTBColumn] = value;
+                    this[this.tableDM_Donvi.DoiColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Seri {
-                get {
-                    return ((string)(this[this.tableDM_ThietBi.SeriColumn]));
-                }
-                set {
-                    this[this.tableDM_ThietBi.SeriColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string MAC {
+            public string TieuDoan {
                 get {
                     try {
-                        return ((string)(this[this.tableDM_ThietBi.MACColumn]));
+                        return ((string)(this[this.tableDM_Donvi.TieuDoanColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'MAC\' in table \'DM_ThietBi\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'TieuDoan\' in table \'DM_Donvi\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableDM_ThietBi.MACColumn] = value;
+                    this[this.tableDM_Donvi.TieuDoanColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string CoreCPU {
+            public string LuDoan {
                 get {
-                    try {
-                        return ((string)(this[this.tableDM_ThietBi.CoreCPUColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CoreCPU\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableDM_Donvi.LuDoanColumn]));
                 }
                 set {
-                    this[this.tableDM_ThietBi.CoreCPUColumn] = value;
+                    this[this.tableDM_Donvi.LuDoanColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string RAM {
-                get {
-                    try {
-                        return ((string)(this[this.tableDM_ThietBi.RAMColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'RAM\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.RAMColumn] = value;
-                }
+            public bool IsDoiNull() {
+                return this.IsNull(this.tableDM_Donvi.DoiColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string HardDisk {
-                get {
-                    try {
-                        return ((string)(this[this.tableDM_ThietBi.HardDiskColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'HardDisk\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.HardDiskColumn] = value;
-                }
+            public void SetDoiNull() {
+                this[this.tableDM_Donvi.DoiColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Monitor {
-                get {
-                    try {
-                        return ((string)(this[this.tableDM_ThietBi.MonitorColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Monitor\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.MonitorColumn] = value;
-                }
+            public bool IsTieuDoanNull() {
+                return this.IsNull(this.tableDM_Donvi.TieuDoanColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int idQuannhan {
-                get {
-                    try {
-                        return ((int)(this[this.tableDM_ThietBi.idQuannhanColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idQuannhan\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.idQuannhanColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int idDonvi {
-                get {
-                    try {
-                        return ((int)(this[this.tableDM_ThietBi.idDonviColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'idDonvi\' in table \'DM_ThietBi\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableDM_ThietBi.idDonviColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsidLoaiTBNull() {
-                return this.IsNull(this.tableDM_ThietBi.idLoaiTBColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetidLoaiTBNull() {
-                this[this.tableDM_ThietBi.idLoaiTBColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsTenTBNull() {
-                return this.IsNull(this.tableDM_ThietBi.TenTBColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetTenTBNull() {
-                this[this.tableDM_ThietBi.TenTBColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMACNull() {
-                return this.IsNull(this.tableDM_ThietBi.MACColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMACNull() {
-                this[this.tableDM_ThietBi.MACColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsCoreCPUNull() {
-                return this.IsNull(this.tableDM_ThietBi.CoreCPUColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetCoreCPUNull() {
-                this[this.tableDM_ThietBi.CoreCPUColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsRAMNull() {
-                return this.IsNull(this.tableDM_ThietBi.RAMColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetRAMNull() {
-                this[this.tableDM_ThietBi.RAMColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsHardDiskNull() {
-                return this.IsNull(this.tableDM_ThietBi.HardDiskColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetHardDiskNull() {
-                this[this.tableDM_ThietBi.HardDiskColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsMonitorNull() {
-                return this.IsNull(this.tableDM_ThietBi.MonitorColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetMonitorNull() {
-                this[this.tableDM_ThietBi.MonitorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsidQuannhanNull() {
-                return this.IsNull(this.tableDM_ThietBi.idQuannhanColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetidQuannhanNull() {
-                this[this.tableDM_ThietBi.idQuannhanColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsidDonviNull() {
-                return this.IsNull(this.tableDM_ThietBi.idDonviColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetidDonviNull() {
-                this[this.tableDM_ThietBi.idDonviColumn] = global::System.Convert.DBNull;
+            public void SetTieuDoanNull() {
+                this[this.tableDM_Donvi.TieuDoanColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -975,22 +677,22 @@ namespace QLTTBCNTT_WinForm {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class DM_ThietBiRowChangeEvent : global::System.EventArgs {
+        public class DM_DonviRowChangeEvent : global::System.EventArgs {
             
-            private DM_ThietBiRow eventRow;
+            private DM_DonviRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRowChangeEvent(DM_ThietBiRow row, global::System.Data.DataRowAction action) {
+            public DM_DonviRowChangeEvent(DM_DonviRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public DM_ThietBiRow Row {
+            public DM_DonviRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -1018,7 +720,7 @@ namespace QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DM_ThietBiTableAdapter : global::System.ComponentModel.Component {
+    public partial class DM_DonviTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -1032,7 +734,7 @@ namespace QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DM_ThietBiTableAdapter() {
+        public DM_DonviTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1129,94 +831,46 @@ namespace QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DM_ThietBi";
-            tableMapping.ColumnMappings.Add("IdThietBi", "IdThietBi");
-            tableMapping.ColumnMappings.Add("idLoaiTB", "idLoaiTB");
-            tableMapping.ColumnMappings.Add("TenTB", "TenTB");
-            tableMapping.ColumnMappings.Add("Seri", "Seri");
-            tableMapping.ColumnMappings.Add("MAC", "MAC");
-            tableMapping.ColumnMappings.Add("CoreCPU", "CoreCPU");
-            tableMapping.ColumnMappings.Add("RAM", "RAM");
-            tableMapping.ColumnMappings.Add("HardDisk", "HardDisk");
-            tableMapping.ColumnMappings.Add("Monitor", "Monitor");
-            tableMapping.ColumnMappings.Add("idQuannhan", "idQuannhan");
-            tableMapping.ColumnMappings.Add("idDonvi", "idDonvi");
+            tableMapping.DataSetTable = "DM_Donvi";
+            tableMapping.ColumnMappings.Add("IdDonvi", "IdDonvi");
+            tableMapping.ColumnMappings.Add("Doi", "Doi");
+            tableMapping.ColumnMappings.Add("TieuDoan", "TieuDoan");
+            tableMapping.ColumnMappings.Add("LuDoan", "LuDoan");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_ThietBi] WHERE (([IdThietBi] = @Original_IdThietBi) AND ((@IsNull_idLoaiTB = 1 AND [idLoaiTB] IS NULL) OR ([idLoaiTB] = @Original_idLoaiTB)) AND ((@IsNull_TenTB = 1 AND [TenTB] IS NULL) OR ([TenTB] = @Original_TenTB)) AND ([Seri] = @Original_Seri) AND ((@IsNull_MAC = 1 AND [MAC] IS NULL) OR ([MAC] = @Original_MAC)) AND ((@IsNull_CoreCPU = 1 AND [CoreCPU] IS NULL) OR ([CoreCPU] = @Original_CoreCPU)) AND ((@IsNull_RAM = 1 AND [RAM] IS NULL) OR ([RAM] = @Original_RAM)) AND ((@IsNull_HardDisk = 1 AND [HardDisk] IS NULL) OR ([HardDisk] = @Original_HardDisk)) AND ((@IsNull_Monitor = 1 AND [Monitor] IS NULL) OR ([Monitor] = @Original_Monitor)) AND ((@IsNull_idQuannhan = 1 AND [idQuannhan] IS NULL) OR ([idQuannhan] = @Original_idQuannhan)) AND ((@IsNull_idDonvi = 1 AND [idDonvi] IS NULL) OR ([idDonvi] = @Original_idDonvi)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[DM_Donvi] WHERE (([IdDonvi] = @Original_IdDonvi) AND ((@IsNull_Doi = 1 AND [Doi] IS NULL) OR ([Doi] = @Original_Doi)) AND ((@IsNull_TieuDoan = 1 AND [TieuDoan] IS NULL) OR ([TieuDoan] = @Original_TieuDoan)) AND ([LuDoan] = @Original_LuDoan))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdThietBi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdThietBi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenTB", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Seri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CoreCPU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CoreCPU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RAM", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HardDisk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardDisk", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Monitor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Monitor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdDonvi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Doi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Doi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TieuDoan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TieuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LuDoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[DM_ThietBi] ([idLoaiTB], [TenTB], [Seri], [MAC], [CoreCPU], [RAM], [HardDisk], [Monitor], [idQuannhan], [idDonvi]) VALUES (@idLoaiTB, @TenTB, @Seri, @MAC, @CoreCPU, @RAM, @HardDisk, @Monitor, @idQuannhan, @idDonvi);
-SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, idQuannhan, idDonvi FROM DM_ThietBi WHERE (IdThietBi = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[DM_Donvi] ([Doi], [TieuDoan], [LuDoan]) VALUES (@Doi, @TieuDoa" +
+                "n, @LuDoan);\r\nSELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi" +
+                " = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenTB", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Seri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CoreCPU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAM", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardDisk", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Monitor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Doi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TieuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LuDoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_ThietBi] SET [idLoaiTB] = @idLoaiTB, [TenTB] = @TenTB, [Seri] = @Seri, [MAC] = @MAC, [CoreCPU] = @CoreCPU, [RAM] = @RAM, [HardDisk] = @HardDisk, [Monitor] = @Monitor, [idQuannhan] = @idQuannhan, [idDonvi] = @idDonvi WHERE (([IdThietBi] = @Original_IdThietBi) AND ((@IsNull_idLoaiTB = 1 AND [idLoaiTB] IS NULL) OR ([idLoaiTB] = @Original_idLoaiTB)) AND ((@IsNull_TenTB = 1 AND [TenTB] IS NULL) OR ([TenTB] = @Original_TenTB)) AND ([Seri] = @Original_Seri) AND ((@IsNull_MAC = 1 AND [MAC] IS NULL) OR ([MAC] = @Original_MAC)) AND ((@IsNull_CoreCPU = 1 AND [CoreCPU] IS NULL) OR ([CoreCPU] = @Original_CoreCPU)) AND ((@IsNull_RAM = 1 AND [RAM] IS NULL) OR ([RAM] = @Original_RAM)) AND ((@IsNull_HardDisk = 1 AND [HardDisk] IS NULL) OR ([HardDisk] = @Original_HardDisk)) AND ((@IsNull_Monitor = 1 AND [Monitor] IS NULL) OR ([Monitor] = @Original_Monitor)) AND ((@IsNull_idQuannhan = 1 AND [idQuannhan] IS NULL) OR ([idQuannhan] = @Original_idQuannhan)) AND ((@IsNull_idDonvi = 1 AND [idDonvi] IS NULL) OR ([idDonvi] = @Original_idDonvi)));
-SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, idQuannhan, idDonvi FROM DM_ThietBi WHERE (IdThietBi = @IdThietBi)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[DM_Donvi] SET [Doi] = @Doi, [TieuDoan] = @TieuDoan, [LuDoan] = @LuDoan WHERE (([IdDonvi] = @Original_IdDonvi) AND ((@IsNull_Doi = 1 AND [Doi] IS NULL) OR ([Doi] = @Original_Doi)) AND ((@IsNull_TieuDoan = 1 AND [TieuDoan] IS NULL) OR ([TieuDoan] = @Original_TieuDoan)) AND ([LuDoan] = @Original_LuDoan));
+SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TenTB", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Seri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seri", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MAC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@CoreCPU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RAM", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@HardDisk", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Monitor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdThietBi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdThietBi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idLoaiTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idLoaiTB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TenTB", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TenTB", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TenTB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Seri", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Seri", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_MAC", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_MAC", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MAC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_CoreCPU", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_CoreCPU", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "CoreCPU", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_RAM", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RAM", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RAM", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_HardDisk", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_HardDisk", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "HardDisk", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Monitor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Monitor", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Monitor", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idQuannhan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idQuannhan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_idDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "idDonvi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdThietBi", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdThietBi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Doi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@TieuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@LuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LuDoan", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdDonvi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdDonvi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Doi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Doi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Doi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_TieuDoan", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_TieuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "TieuDoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_LuDoan", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "LuDoan", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdDonvi", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdDonvi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1232,8 +886,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, id" +
-                "Quannhan, idDonvi FROM dbo.DM_ThietBi";
+            this._commandCollection[0].CommandText = "SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM dbo.DM_Donvi";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1241,7 +894,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QLTTBCNTTDataSet.DM_ThietBiDataTable dataTable) {
+        public virtual int Fill(QLTTBCNTTDataSet.DM_DonviDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1254,9 +907,9 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QLTTBCNTTDataSet.DM_ThietBiDataTable GetData() {
+        public virtual QLTTBCNTTDataSet.DM_DonviDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QLTTBCNTTDataSet.DM_ThietBiDataTable dataTable = new QLTTBCNTTDataSet.DM_ThietBiDataTable();
+            QLTTBCNTTDataSet.DM_DonviDataTable dataTable = new QLTTBCNTTDataSet.DM_DonviDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1264,7 +917,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLTTBCNTTDataSet.DM_ThietBiDataTable dataTable) {
+        public virtual int Update(QLTTBCNTTDataSet.DM_DonviDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
@@ -1272,7 +925,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         public virtual int Update(QLTTBCNTTDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "DM_ThietBi");
+            return this.Adapter.Update(dataSet, "DM_Donvi");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1294,85 +947,29 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdThietBi, global::System.Nullable<int> Original_idLoaiTB, string Original_TenTB, string Original_Seri, string Original_MAC, string Original_CoreCPU, string Original_RAM, string Original_HardDisk, string Original_Monitor, global::System.Nullable<int> Original_idQuannhan, global::System.Nullable<int> Original_idDonvi) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdThietBi));
-            if ((Original_idLoaiTB.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_idLoaiTB.Value));
-            }
-            else {
+        public virtual int Delete(int Original_IdDonvi, string Original_Doi, string Original_TieuDoan, string Original_LuDoan) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdDonvi));
+            if ((Original_Doi == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Original_TenTB == null)) {
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Doi));
+            }
+            if ((Original_TieuDoan == null)) {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_TenTB));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_TieuDoan));
             }
-            if ((Original_Seri == null)) {
-                throw new global::System.ArgumentNullException("Original_Seri");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Seri));
-            }
-            if ((Original_MAC == null)) {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
+            if ((Original_LuDoan == null)) {
+                throw new global::System.ArgumentNullException("Original_LuDoan");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((string)(Original_MAC));
-            }
-            if ((Original_CoreCPU == null)) {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[9].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((string)(Original_CoreCPU));
-            }
-            if ((Original_RAM == null)) {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[11].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[11].Value = ((string)(Original_RAM));
-            }
-            if ((Original_HardDisk == null)) {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[13].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[13].Value = ((string)(Original_HardDisk));
-            }
-            if ((Original_Monitor == null)) {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[15].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((string)(Original_Monitor));
-            }
-            if ((Original_idQuannhan.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[17].Value = ((int)(Original_idQuannhan.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            if ((Original_idDonvi.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[19].Value = ((int)(Original_idDonvi.Value));
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[19].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_LuDoan));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1394,66 +991,24 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<int> idLoaiTB, string TenTB, string Seri, string MAC, string CoreCPU, string RAM, string HardDisk, string Monitor, global::System.Nullable<int> idQuannhan, global::System.Nullable<int> idDonvi) {
-            if ((idLoaiTB.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(idLoaiTB.Value));
-            }
-            else {
+        public virtual int Insert(string Doi, string TieuDoan, string LuDoan) {
+            if ((Doi == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((TenTB == null)) {
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Doi));
+            }
+            if ((TieuDoan == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TenTB));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(TieuDoan));
             }
-            if ((Seri == null)) {
-                throw new global::System.ArgumentNullException("Seri");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Seri));
-            }
-            if ((MAC == null)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((LuDoan == null)) {
+                throw new global::System.ArgumentNullException("LuDoan");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(MAC));
-            }
-            if ((CoreCPU == null)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(CoreCPU));
-            }
-            if ((RAM == null)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(RAM));
-            }
-            if ((HardDisk == null)) {
-                this.Adapter.InsertCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[6].Value = ((string)(HardDisk));
-            }
-            if ((Monitor == null)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(Monitor));
-            }
-            if ((idQuannhan.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[8].Value = ((int)(idQuannhan.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((idDonvi.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[9].Value = ((int)(idDonvi.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(LuDoan));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1475,169 +1030,49 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<int> idLoaiTB, 
-                    string TenTB, 
-                    string Seri, 
-                    string MAC, 
-                    string CoreCPU, 
-                    string RAM, 
-                    string HardDisk, 
-                    string Monitor, 
-                    global::System.Nullable<int> idQuannhan, 
-                    global::System.Nullable<int> idDonvi, 
-                    int Original_IdThietBi, 
-                    global::System.Nullable<int> Original_idLoaiTB, 
-                    string Original_TenTB, 
-                    string Original_Seri, 
-                    string Original_MAC, 
-                    string Original_CoreCPU, 
-                    string Original_RAM, 
-                    string Original_HardDisk, 
-                    string Original_Monitor, 
-                    global::System.Nullable<int> Original_idQuannhan, 
-                    global::System.Nullable<int> Original_idDonvi, 
-                    int IdThietBi) {
-            if ((idLoaiTB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(idLoaiTB.Value));
-            }
-            else {
+        public virtual int Update(string Doi, string TieuDoan, string LuDoan, int Original_IdDonvi, string Original_Doi, string Original_TieuDoan, string Original_LuDoan, int IdDonvi) {
+            if ((Doi == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            if ((TenTB == null)) {
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Doi));
+            }
+            if ((TieuDoan == null)) {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TenTB));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(TieuDoan));
             }
-            if ((Seri == null)) {
-                throw new global::System.ArgumentNullException("Seri");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Seri));
-            }
-            if ((MAC == null)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((LuDoan == null)) {
+                throw new global::System.ArgumentNullException("LuDoan");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(MAC));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(LuDoan));
             }
-            if ((CoreCPU == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(CoreCPU));
-            }
-            if ((RAM == null)) {
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IdDonvi));
+            if ((Original_Doi == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(RAM));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Original_Doi));
             }
-            if ((HardDisk == null)) {
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(HardDisk));
-            }
-            if ((Monitor == null)) {
+            if ((Original_TieuDoan == null)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Monitor));
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_TieuDoan));
             }
-            if ((idQuannhan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(idQuannhan.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
-            }
-            if ((idDonvi.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(idDonvi.Value));
+            if ((Original_LuDoan == null)) {
+                throw new global::System.ArgumentNullException("Original_LuDoan");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_LuDoan));
             }
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_IdThietBi));
-            if ((Original_idLoaiTB.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_idLoaiTB.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
-            }
-            if ((Original_TenTB == null)) {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_TenTB));
-            }
-            if ((Original_Seri == null)) {
-                throw new global::System.ArgumentNullException("Original_Seri");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_Seri));
-            }
-            if ((Original_MAC == null)) {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[17].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_MAC));
-            }
-            if ((Original_CoreCPU == null)) {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[19].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_CoreCPU));
-            }
-            if ((Original_RAM == null)) {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[21].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_RAM));
-            }
-            if ((Original_HardDisk == null)) {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[23].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_HardDisk));
-            }
-            if ((Original_Monitor == null)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_Monitor));
-            }
-            if ((Original_idQuannhan.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(Original_idQuannhan.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[27].Value = global::System.DBNull.Value;
-            }
-            if ((Original_idDonvi.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[29].Value = ((int)(Original_idDonvi.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[28].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[29].Value = global::System.DBNull.Value;
-            }
-            this.Adapter.UpdateCommand.Parameters[30].Value = ((int)(IdThietBi));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(IdDonvi));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1658,29 +1093,8 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(
-                    global::System.Nullable<int> idLoaiTB, 
-                    string TenTB, 
-                    string Seri, 
-                    string MAC, 
-                    string CoreCPU, 
-                    string RAM, 
-                    string HardDisk, 
-                    string Monitor, 
-                    global::System.Nullable<int> idQuannhan, 
-                    global::System.Nullable<int> idDonvi, 
-                    int Original_IdThietBi, 
-                    global::System.Nullable<int> Original_idLoaiTB, 
-                    string Original_TenTB, 
-                    string Original_Seri, 
-                    string Original_MAC, 
-                    string Original_CoreCPU, 
-                    string Original_RAM, 
-                    string Original_HardDisk, 
-                    string Original_Monitor, 
-                    global::System.Nullable<int> Original_idQuannhan, 
-                    global::System.Nullable<int> Original_idDonvi) {
-            return this.Update(idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, idQuannhan, idDonvi, Original_IdThietBi, Original_idLoaiTB, Original_TenTB, Original_Seri, Original_MAC, Original_CoreCPU, Original_RAM, Original_HardDisk, Original_Monitor, Original_idQuannhan, Original_idDonvi, Original_IdThietBi);
+        public virtual int Update(string Doi, string TieuDoan, string LuDoan, int Original_IdDonvi, string Original_Doi, string Original_TieuDoan, string Original_LuDoan) {
+            return this.Update(Doi, TieuDoan, LuDoan, Original_IdDonvi, Original_Doi, Original_TieuDoan, Original_LuDoan, Original_IdDonvi);
         }
     }
     
@@ -1696,7 +1110,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         
         private UpdateOrderOption _updateOrder;
         
-        private DM_ThietBiTableAdapter _dM_ThietBiTableAdapter;
+        private DM_DonviTableAdapter _dM_DonviTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1718,12 +1132,12 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public DM_ThietBiTableAdapter DM_ThietBiTableAdapter {
+        public DM_DonviTableAdapter DM_DonviTableAdapter {
             get {
-                return this._dM_ThietBiTableAdapter;
+                return this._dM_DonviTableAdapter;
             }
             set {
-                this._dM_ThietBiTableAdapter = value;
+                this._dM_DonviTableAdapter = value;
             }
         }
         
@@ -1746,9 +1160,9 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._dM_ThietBiTableAdapter != null) 
-                            && (this._dM_ThietBiTableAdapter.Connection != null))) {
-                    return this._dM_ThietBiTableAdapter.Connection;
+                if (((this._dM_DonviTableAdapter != null) 
+                            && (this._dM_DonviTableAdapter.Connection != null))) {
+                    return this._dM_DonviTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1763,7 +1177,7 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._dM_ThietBiTableAdapter != null)) {
+                if ((this._dM_DonviTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1777,12 +1191,12 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateUpdatedRows(QLTTBCNTTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dM_ThietBiTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.DM_ThietBi.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._dM_DonviTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._dM_ThietBiTableAdapter.Update(updatedRows));
+                    result = (result + this._dM_DonviTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1796,11 +1210,11 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateInsertedRows(QLTTBCNTTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._dM_ThietBiTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.DM_ThietBi.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._dM_DonviTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._dM_ThietBiTableAdapter.Update(addedRows));
+                    result = (result + this._dM_DonviTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1814,11 +1228,11 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(QLTTBCNTTDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._dM_ThietBiTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.DM_ThietBi.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._dM_DonviTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._dM_ThietBiTableAdapter.Update(deletedRows));
+                    result = (result + this._dM_DonviTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1861,8 +1275,8 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._dM_ThietBiTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._dM_ThietBiTableAdapter.Connection) == false))) {
+            if (((this._dM_DonviTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._dM_DonviTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1898,13 +1312,13 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._dM_ThietBiTableAdapter != null)) {
-                    revertConnections.Add(this._dM_ThietBiTableAdapter, this._dM_ThietBiTableAdapter.Connection);
-                    this._dM_ThietBiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._dM_ThietBiTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._dM_ThietBiTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._dM_ThietBiTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._dM_ThietBiTableAdapter.Adapter);
+                if ((this._dM_DonviTableAdapter != null)) {
+                    revertConnections.Add(this._dM_DonviTableAdapter, this._dM_DonviTableAdapter.Connection);
+                    this._dM_DonviTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._dM_DonviTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._dM_DonviTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._dM_DonviTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._dM_DonviTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1965,9 +1379,9 @@ SELECT IdThietBi, idLoaiTB, TenTB, Seri, MAC, CoreCPU, RAM, HardDisk, Monitor, i
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._dM_ThietBiTableAdapter != null)) {
-                    this._dM_ThietBiTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dM_ThietBiTableAdapter]));
-                    this._dM_ThietBiTableAdapter.Transaction = null;
+                if ((this._dM_DonviTableAdapter != null)) {
+                    this._dM_DonviTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._dM_DonviTableAdapter]));
+                    this._dM_DonviTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

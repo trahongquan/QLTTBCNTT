@@ -22,8 +22,8 @@ namespace QLTTBCNTT_WinForm
 
         private void FormQN_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet1.DM_Donvi' table. You can move, or remove it, as needed.
-            //this.dM_DonviTableAdapter.Fill(this.qLTTBCNTTDataSet1.DM_Donvi);
+            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet.DM_Donvi' table. You can move, or remove it, as needed.
+            this.dM_DonviTableAdapter.Fill(this.qLTTBCNTTDataSet.DM_Donvi);
 
             Reload();
             dtgvQN.Columns[0].HeaderText = "IDQN";
@@ -110,18 +110,19 @@ namespace QLTTBCNTT_WinForm
         }
         private bool Input()
         {
-            if (txtCMTQD.Text == "" || txtTen.Text == "" || cbbCapbac.Text == "" || cbbChucvu.Text == "" || cbbDonvi.Text == "") { return false; }
-            MessageBox.Show("Bạn cần nhập đủ các trường");
+            if (txtCMTQD.Text == "" || txtTen.Text == "" || cbbCapbac.Text == "" || cbbChucvu.Text == "" || cbbDonvi.Text == "") { 
+                MessageBox.Show("Bạn cần nhập đủ các trường");
+                return false; }
             return true;
         }
         private void Clear()
         {
             txtCMTQD.Text = "";
             txtTen.Text = "";
-            txtDonvi.Text = "";
+            labDV.Text = "";
             cbbCapbac.GetItemText(0);
             cbbChucvu.GetItemText(0);
-            cbbDonvi.GetItemText(0);
+            cbbDonvi.Text = "";
         }
 
         private void Reload()
@@ -151,52 +152,12 @@ namespace QLTTBCNTT_WinForm
             Display();
         }
 
-        private void cbbDonvi_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbbDonvi_TextChanged(object sender, EventArgs e)
         {
-            //string x = cbbIDLTB.Text;
-            switch (cbbDonvi.SelectedItem)
-            {
-                case "1":
-                    txtDonvi.Text = "Đội 1, Tiều đoàn 1, Lữ đoàn 1";
-                    break;
-                case "2":
-                    txtDonvi.Text = "Đội 2, Tiều đoàn 1, Lữ đoàn 1";
-                    break;
-                case "3":
-                    txtDonvi.Text = "Đội 3, Tiều đoàn 1, Lữ đoàn 1";
-                    break;
-                case "4":
-                    txtDonvi.Text = "Đội 4, Tiều đoàn 2, Lữ đoàn 1";
-                    break;
-                case "5":
-                    txtDonvi.Text = "Đội 5, Tiều đoàn 2, Lữ đoàn 1";
-                    break;
-                case "6":
-                    txtDonvi.Text = "Đội 6, Tiều đoàn 2, Lữ đoàn 1";
-                    break;
-                case "7":
-                    txtDonvi.Text = "Đội 7, Tiều đoàn 3, Lữ đoàn 1";
-                    break;
-                case "8":
-                    txtDonvi.Text = "Đội 8, Tiều đoàn 3, Lữ đoàn 1";
-                    break;
-                case "9":
-                    txtDonvi.Text = "Đội 9, Tiều đoàn 3, Lữ đoàn 1";
-                    break;
-                case "10":
-                    txtDonvi.Text = "Tiều đoàn 1, Lữ đoàn 1";
-                    break;
-                case "11":
-                    txtDonvi.Text = "Tiều đoàn 2, Lữ đoàn 1";
-                    break;
-                case "12":
-                    txtDonvi.Text = "Tiều đoàn 3, Lữ đoàn 1";
-                    break;
-                case "13":
-                    txtDonvi.Text = "Lữ đoàn 1";
-                    break;
-            }
-            #endregion
+            if(cbbDonvi.Text != "") labDV.Text = QueryQN.getDV_Quannhan(cbbDonvi.Text);
         }
+
+        #endregion
+
     }
 }

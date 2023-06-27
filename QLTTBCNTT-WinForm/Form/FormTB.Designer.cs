@@ -33,8 +33,6 @@ namespace QLTTBCNTT_WinForm
             this.components = new System.ComponentModel.Container();
             this.dtgvTB = new System.Windows.Forms.DataGridView();
             this.dMThietBiBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
-            this.dM_ThietBiTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters.DM_ThietBiTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AddTB = new System.Windows.Forms.Button();
@@ -59,9 +57,22 @@ namespace QLTTBCNTT_WinForm
             this.cbbRAM = new System.Windows.Forms.ComboBox();
             this.cbbHardDisk = new System.Windows.Forms.ComboBox();
             this.txtIDLTB = new System.Windows.Forms.TextBox();
+            this.cbbidQN = new System.Windows.Forms.ComboBox();
+            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet_cbbIDQN_DMTB = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet_cbbIDQN_DMTB();
+            this.cbbidDV = new System.Windows.Forms.ComboBox();
+            this.dMDonviBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet1 = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet1();
+            this.dM_QuanNhanTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet_cbbIDQN_DMTBTableAdapters.DM_QuanNhanTableAdapter();
+            this.dM_DonviTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet1TableAdapters.DM_DonviTableAdapter();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTB)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet_cbbIDQN_DMTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvTB
@@ -75,20 +86,6 @@ namespace QLTTBCNTT_WinForm
             this.dtgvTB.Size = new System.Drawing.Size(700, 555);
             this.dtgvTB.TabIndex = 0;
             this.dtgvTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvTB_MouseClick);
-            // 
-            // dMThietBiBindingSource
-            // 
-            this.dMThietBiBindingSource.DataMember = "DM_ThietBi";
-            this.dMThietBiBindingSource.DataSource = this.qLTTBCNTTDataSet;
-            // 
-            // qLTTBCNTTDataSet
-            // 
-            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
-            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dM_ThietBiTableAdapter
-            // 
-            this.dM_ThietBiTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -264,16 +261,18 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtQN
             // 
-            this.txtQN.Location = new System.Drawing.Point(829, 483);
+            this.txtQN.Enabled = false;
+            this.txtQN.Location = new System.Drawing.Point(890, 483);
             this.txtQN.Name = "txtQN";
-            this.txtQN.Size = new System.Drawing.Size(259, 20);
+            this.txtQN.Size = new System.Drawing.Size(198, 20);
             this.txtQN.TabIndex = 21;
             // 
             // txtDonvi
             // 
-            this.txtDonvi.Location = new System.Drawing.Point(829, 527);
+            this.txtDonvi.Enabled = false;
+            this.txtDonvi.Location = new System.Drawing.Point(890, 527);
             this.txtDonvi.Name = "txtDonvi";
-            this.txtDonvi.Size = new System.Drawing.Size(259, 20);
+            this.txtDonvi.Size = new System.Drawing.Size(177, 20);
             this.txtDonvi.TabIndex = 22;
             // 
             // cbbRAM
@@ -319,11 +318,89 @@ namespace QLTTBCNTT_WinForm
             this.txtIDLTB.Size = new System.Drawing.Size(212, 20);
             this.txtIDLTB.TabIndex = 25;
             // 
+            // cbbidQN
+            // 
+            this.cbbidQN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMQuanNhanBindingSource, "IDQuannhan", true));
+            this.cbbidQN.DataSource = this.dMQuanNhanBindingSource;
+            this.cbbidQN.DisplayMember = "IDQuannhan";
+            this.cbbidQN.FormattingEnabled = true;
+            this.cbbidQN.Location = new System.Drawing.Point(829, 482);
+            this.cbbidQN.Name = "cbbidQN";
+            this.cbbidQN.Size = new System.Drawing.Size(48, 21);
+            this.cbbidQN.TabIndex = 26;
+            this.cbbidQN.ValueMember = "IDQuannhan";
+            this.cbbidQN.TextChanged += new System.EventHandler(this.ccbidQN_TextChanged);
+            // 
+            // dMQuanNhanBindingSource
+            // 
+            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
+            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet_cbbIDQN_DMTB;
+            // 
+            // qLTTBCNTTDataSet_cbbIDQN_DMTB
+            // 
+            this.qLTTBCNTTDataSet_cbbIDQN_DMTB.DataSetName = "QLTTBCNTTDataSet_cbbIDQN_DMTB";
+            this.qLTTBCNTTDataSet_cbbIDQN_DMTB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cbbidDV
+            // 
+            this.cbbidDV.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMDonviBindingSource, "IdDonvi", true));
+            this.cbbidDV.DataSource = this.dMDonviBindingSource;
+            this.cbbidDV.DisplayMember = "IdDonvi";
+            this.cbbidDV.FormattingEnabled = true;
+            this.cbbidDV.Location = new System.Drawing.Point(829, 530);
+            this.cbbidDV.Name = "cbbidDV";
+            this.cbbidDV.Size = new System.Drawing.Size(48, 21);
+            this.cbbidDV.TabIndex = 27;
+            this.cbbidDV.ValueMember = "IdDonvi";
+            this.cbbidDV.TextChanged += new System.EventHandler(this.cbbidDV_TextChanged);
+            // 
+            // dMDonviBindingSource
+            // 
+            this.dMDonviBindingSource.DataMember = "DM_Donvi";
+            this.dMDonviBindingSource.DataSource = this.qLTTBCNTTDataSet1;
+            // 
+            // qLTTBCNTTDataSet1
+            // 
+            this.qLTTBCNTTDataSet1.DataSetName = "QLTTBCNTTDataSet1";
+            this.qLTTBCNTTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dM_QuanNhanTableAdapter
+            // 
+            this.dM_QuanNhanTableAdapter.ClearBeforeFill = true;
+            // 
+            // dM_DonviTableAdapter
+            // 
+            this.dM_DonviTableAdapter.ClearBeforeFill = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(0, 0);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.TabIndex = 28;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(1073, 530);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 29;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // FormTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 580);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.cbbidDV);
+            this.Controls.Add(this.cbbidQN);
             this.Controls.Add(this.txtIDLTB);
             this.Controls.Add(this.cbbHardDisk);
             this.Controls.Add(this.cbbRAM);
@@ -355,7 +432,10 @@ namespace QLTTBCNTT_WinForm
             this.Load += new System.EventHandler(this.FormTB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTB)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet_cbbIDQN_DMTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +444,6 @@ namespace QLTTBCNTT_WinForm
         #endregion
 
         private DataGridView dtgvTB;
-        private QLTTBCNTTDataSet qLTTBCNTTDataSet;
         private BindingSource dMThietBiBindingSource;
         private QLTTBCNTTDataSetTableAdapters.DM_ThietBiTableAdapter dM_ThietBiTableAdapter;
         private Label label1;
@@ -391,5 +470,15 @@ namespace QLTTBCNTT_WinForm
         private ComboBox cbbRAM;
         private ComboBox cbbHardDisk;
         private TextBox txtIDLTB;
+        private ComboBox cbbidQN;
+        private ComboBox cbbidDV;
+        private QLTTBCNTTDataSet_cbbIDQN_DMTB qLTTBCNTTDataSet_cbbIDQN_DMTB;
+        private BindingSource dMQuanNhanBindingSource;
+        private QLTTBCNTTDataSet_cbbIDQN_DMTBTableAdapters.DM_QuanNhanTableAdapter dM_QuanNhanTableAdapter;
+        private QLTTBCNTTDataSet1 qLTTBCNTTDataSet1;
+        private BindingSource dMDonviBindingSource;
+        private QLTTBCNTTDataSet1TableAdapters.DM_DonviTableAdapter dM_DonviTableAdapter;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
     }
 }

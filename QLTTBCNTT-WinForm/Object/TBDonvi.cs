@@ -8,22 +8,23 @@ namespace QLTTBCNTT_WinForm.Object
 {
     internal class TBDonvi
     {
-        private int idTBDV, idDonvi, idThietbi;
+        private int idTBDV, idDV, idTB;
         private string DateBorrow, DateReturn;
         public TBDonvi() { }
 
-        public TBDonvi(/*int idTBDV,*/ int idDonvi, int idThietbi, string dateBorrow, string dateReturn)
+        public TBDonvi(/*int idTBDV,*/ int idDonvi, int idTBDonvi, string dateBorrow, string dateReturn)
         {
             //this.idTBDV = idTBDV;
-            this.idDonvi = idDonvi;
-            this.idThietbi = idThietbi;
+            idDV = idDonvi;
+            idTB = idTBDonvi;
             DateBorrow = dateBorrow;
             DateReturn = dateReturn;
         }
 
         public int IdTBDV { get => idTBDV; set => idTBDV = value; }
-        public int IdDonvi { get => idDonvi; set => idDonvi = value; }
-        public int IdThietbi { get => idThietbi; set => idThietbi = value; }
+        public int IdDV { get => idDV; set => idDV = value; }
+        public int IdTB { get => idTB; set => idTB = value; }
+        
         public string DateBorrow1 { get => DateBorrow; set => DateBorrow = value; }
         public string DateReturn1 { get => DateReturn; set => DateReturn = value; }
     }

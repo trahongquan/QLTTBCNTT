@@ -20,9 +20,9 @@ namespace QLTTBCNTT_WinForm {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("QLTTBCNTTDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QLTTBCNTTDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class QLTTBCNTTDataSet1 : global::System.Data.DataSet {
+    public partial class QLTTBCNTTDataSet2 : global::System.Data.DataSet {
         
         private DM_DonviDataTable tableDM_Donvi;
         
@@ -30,7 +30,7 @@ namespace QLTTBCNTT_WinForm {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public QLTTBCNTTDataSet1() {
+        public QLTTBCNTTDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace QLTTBCNTT_WinForm {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected QLTTBCNTTDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QLTTBCNTTDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace QLTTBCNTT_WinForm {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            QLTTBCNTTDataSet1 cln = ((QLTTBCNTTDataSet1)(base.Clone()));
+            QLTTBCNTTDataSet2 cln = ((QLTTBCNTTDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace QLTTBCNTT_WinForm {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "QLTTBCNTTDataSet1";
+            this.DataSetName = "QLTTBCNTTDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/QLTTBCNTTDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/QLTTBCNTTDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableDM_Donvi = new DM_DonviDataTable();
@@ -225,7 +225,7 @@ namespace QLTTBCNTT_WinForm {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            QLTTBCNTTDataSet1 ds = new QLTTBCNTTDataSet1();
+            QLTTBCNTTDataSet2 ds = new QLTTBCNTTDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -521,7 +521,7 @@ namespace QLTTBCNTT_WinForm {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                QLTTBCNTTDataSet1 ds = new QLTTBCNTTDataSet1();
+                QLTTBCNTTDataSet2 ds = new QLTTBCNTTDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -708,7 +708,7 @@ namespace QLTTBCNTT_WinForm {
         }
     }
 }
-namespace QLTTBCNTT_WinForm.QLTTBCNTTDataSet1TableAdapters {
+namespace QLTTBCNTT_WinForm.QLTTBCNTTDataSet2TableAdapters {
     
     
     /// <summary>
@@ -894,7 +894,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(QLTTBCNTTDataSet1.DM_DonviDataTable dataTable) {
+        public virtual int Fill(QLTTBCNTTDataSet2.DM_DonviDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -907,9 +907,9 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual QLTTBCNTTDataSet1.DM_DonviDataTable GetData() {
+        public virtual QLTTBCNTTDataSet2.DM_DonviDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            QLTTBCNTTDataSet1.DM_DonviDataTable dataTable = new QLTTBCNTTDataSet1.DM_DonviDataTable();
+            QLTTBCNTTDataSet2.DM_DonviDataTable dataTable = new QLTTBCNTTDataSet2.DM_DonviDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -917,14 +917,14 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLTTBCNTTDataSet1.DM_DonviDataTable dataTable) {
+        public virtual int Update(QLTTBCNTTDataSet2.DM_DonviDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(QLTTBCNTTDataSet1 dataSet) {
+        public virtual int Update(QLTTBCNTTDataSet2 dataSet) {
             return this.Adapter.Update(dataSet, "DM_Donvi");
         }
         
@@ -1189,7 +1189,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(QLTTBCNTTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(QLTTBCNTTDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dM_DonviTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1208,7 +1208,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(QLTTBCNTTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(QLTTBCNTTDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._dM_DonviTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1226,7 +1226,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(QLTTBCNTTDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(QLTTBCNTTDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._dM_DonviTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.DM_Donvi.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -1268,7 +1268,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)";
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(QLTTBCNTTDataSet1 dataSet) {
+        public virtual int UpdateAll(QLTTBCNTTDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

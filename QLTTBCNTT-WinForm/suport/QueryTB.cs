@@ -41,7 +41,7 @@ namespace QLTTBCNTT_WinForm.suport
             return bangXM;
         }
 
-        public void Insert(DMTB Thietbi) // them
+        public void Insert(Thietbi Thietbi) // them
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "Insert into DM_ThietBi values " +
@@ -73,7 +73,7 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlConnection.Close();
             }
         }
-        public void Modify(DMTB Thietbi, int IdTB) // sua theo TT
+        public void Modify(Thietbi Thietbi, int IdTB) // sua theo TT
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "UPDATE DM_ThietBi SET " +
@@ -131,6 +131,56 @@ namespace QLTTBCNTT_WinForm.suport
             {
                 sqlConnection.Close();
             }
+        }
+        #endregion
+        #region query QN, ĐV theo id
+        public DataSet getQN_Thietbi(string idQN)
+        {
+            DataSet bangDV = new DataSet();
+            string query = "select Ten, idDonvi from DM_QuanNhan " +
+                            "where IDQuannhan = " + idQN;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            
+            return bangDV;
+        }
+        
+        public DataSet getDV_Thietbi(string idDonvi)
+        {
+            DataSet bangDV = new DataSet();
+            string query = "select Doi, TieuDoan, LuDoan from DM_Donvi " +
+                            "where IdDonvi = " + idDonvi;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            //string DV;
+            //DV = bangDV.Tables[0].Rows[0][0].ToString() + ", " + bangDV.Tables[0].Rows[0][1].ToString() + ", " + bangDV.Tables[0].Rows[0][2].ToString();
+            return bangDV;
         }
         #endregion
     }

@@ -32,13 +32,13 @@ namespace QLTTBCNTT_WinForm
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnChildFormTB = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnChildFormTBDV = new System.Windows.Forms.Button();
+            this.btnChildFormDMTB = new System.Windows.Forms.Button();
             this.btnChildFormQN = new System.Windows.Forms.Button();
             this.btnChildFormDV = new System.Windows.Forms.Button();
             this.btnChildFormTBQN = new System.Windows.Forms.Button();
-            this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.Dashboard = new System.Windows.Forms.Button();
+            this.panelDesktopPane = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,8 +47,8 @@ namespace QLTTBCNTT_WinForm
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.BackColor = System.Drawing.Color.MintCream;
             this.flowLayoutPanel1.Controls.Add(this.btnChildFormTB);
-            this.flowLayoutPanel1.Controls.Add(this.button5);
-            this.flowLayoutPanel1.Controls.Add(this.button6);
+            this.flowLayoutPanel1.Controls.Add(this.btnChildFormTBDV);
+            this.flowLayoutPanel1.Controls.Add(this.btnChildFormDMTB);
             this.flowLayoutPanel1.Controls.Add(this.btnChildFormQN);
             this.flowLayoutPanel1.Controls.Add(this.btnChildFormDV);
             this.flowLayoutPanel1.Controls.Add(this.btnChildFormTBQN);
@@ -73,31 +73,33 @@ namespace QLTTBCNTT_WinForm
             this.btnChildFormTB.UseVisualStyleBackColor = false;
             this.btnChildFormTB.Click += new System.EventHandler(this.btnChildFormTB_Click);
             // 
-            // button5
+            // btnChildFormTBDV
             // 
-            this.button5.BackColor = System.Drawing.Color.LimeGreen;
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(151, 3);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(142, 28);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Đơn vị mượn";
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnChildFormTBDV.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnChildFormTBDV.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChildFormTBDV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChildFormTBDV.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChildFormTBDV.Location = new System.Drawing.Point(151, 3);
+            this.btnChildFormTBDV.Name = "btnChildFormTBDV";
+            this.btnChildFormTBDV.Size = new System.Drawing.Size(142, 28);
+            this.btnChildFormTBDV.TabIndex = 4;
+            this.btnChildFormTBDV.Text = "Đơn vị mượn";
+            this.btnChildFormTBDV.UseVisualStyleBackColor = false;
+            this.btnChildFormTBDV.Click += new System.EventHandler(this.btnChildFormTBDV_Click);
             // 
-            // button6
+            // btnChildFormDMTB
             // 
-            this.button6.BackColor = System.Drawing.Color.LimeGreen;
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(299, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(142, 28);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "DM Thiết bị";
-            this.button6.UseVisualStyleBackColor = false;
+            this.btnChildFormDMTB.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnChildFormDMTB.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnChildFormDMTB.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChildFormDMTB.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChildFormDMTB.Location = new System.Drawing.Point(299, 3);
+            this.btnChildFormDMTB.Name = "btnChildFormDMTB";
+            this.btnChildFormDMTB.Size = new System.Drawing.Size(142, 28);
+            this.btnChildFormDMTB.TabIndex = 1;
+            this.btnChildFormDMTB.Text = "DM Thiết bị";
+            this.btnChildFormDMTB.UseVisualStyleBackColor = false;
+            this.btnChildFormDMTB.Click += new System.EventHandler(this.btnChildFormDMTB_Click);
             // 
             // btnChildFormQN
             // 
@@ -126,6 +128,7 @@ namespace QLTTBCNTT_WinForm
             this.btnChildFormDV.TabIndex = 2;
             this.btnChildFormDV.Text = "Đơn vị";
             this.btnChildFormDV.UseVisualStyleBackColor = false;
+            this.btnChildFormDV.Click += new System.EventHandler(this.btnChildFormDV_Click);
             // 
             // btnChildFormTBQN
             // 
@@ -140,13 +143,7 @@ namespace QLTTBCNTT_WinForm
             this.btnChildFormTBQN.TabIndex = 3;
             this.btnChildFormTBQN.Text = "Cá nhân mượn";
             this.btnChildFormTBQN.UseVisualStyleBackColor = false;
-            // 
-            // panelDesktopPane
-            // 
-            this.panelDesktopPane.Location = new System.Drawing.Point(3, 43);
-            this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(1123, 618);
-            this.panelDesktopPane.TabIndex = 1;
+            this.btnChildFormTBQN.Click += new System.EventHandler(this.btnChildFormTBQN_Click);
             // 
             // Dashboard
             // 
@@ -158,6 +155,13 @@ namespace QLTTBCNTT_WinForm
             this.Dashboard.TabIndex = 5;
             this.Dashboard.Text = "Trang chủ";
             this.Dashboard.UseVisualStyleBackColor = false;
+            // 
+            // panelDesktopPane
+            // 
+            this.panelDesktopPane.Location = new System.Drawing.Point(3, 43);
+            this.panelDesktopPane.Name = "panelDesktopPane";
+            this.panelDesktopPane.Size = new System.Drawing.Size(1123, 618);
+            this.panelDesktopPane.TabIndex = 1;
             // 
             // FormMain
             // 
@@ -181,8 +185,8 @@ namespace QLTTBCNTT_WinForm
         private System.Windows.Forms.Button btnChildFormQN;
         private System.Windows.Forms.Button btnChildFormDV;
         private System.Windows.Forms.Button btnChildFormTBQN;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnChildFormTBDV;
+        private System.Windows.Forms.Button btnChildFormDMTB;
         private System.Windows.Forms.Panel panelDesktopPane;
         private Button Dashboard;
     }

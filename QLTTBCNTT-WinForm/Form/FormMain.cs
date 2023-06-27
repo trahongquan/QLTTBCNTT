@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLTTBCNTT_WinForm.Object;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,6 +55,7 @@ namespace QLTTBCNTT_WinForm
             childForm.BringToFront();
             childForm.Show();
         }
+        #region button header
         private void btnChildFormTB_Click(object sender, EventArgs e)
         {
             FormTB FormTB = new FormTB();
@@ -65,5 +67,29 @@ namespace QLTTBCNTT_WinForm
             FormQN FormQN = new FormQN();
             OpenChildForm(FormQN, sender);
         }
+
+        private void btnChildFormTBDV_Click(object sender, EventArgs e)
+        {
+            FormTBDV FormTBDV = new FormTBDV();
+            OpenChildForm(FormTBDV, sender);
+        }
+
+        private void btnChildFormDMTB_Click(object sender, EventArgs e)
+        {
+            //Không làm
+        }
+
+        private void btnChildFormDV_Click(object sender, EventArgs e)
+        {
+            FormDV FormDV = new FormDV();
+            OpenChildForm(FormDV, sender);
+        }
+
+        private void btnChildFormTBQN_Click(object sender, EventArgs e)
+        {
+            FormTBQN FormTBQN = new FormTBQN();
+            OpenChildForm(FormTBQN, sender);
+        }
+        #endregion
     }
 }

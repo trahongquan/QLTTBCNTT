@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace QLTTBCNTT_WinForm
 {
@@ -22,6 +23,10 @@ namespace QLTTBCNTT_WinForm
 
         private void FormTB_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet1.DM_Donvi' table. You can move, or remove it, as needed.
+            this.dM_DonviTableAdapter.Fill(this.qLTTBCNTTDataSet1.DM_Donvi);
+            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet_cbbIDQN_DMTB.DM_QuanNhan' table. You can move, or remove it, as needed.
+            this.dM_QuanNhanTableAdapter.Fill(this.qLTTBCNTTDataSet_cbbIDQN_DMTB.DM_QuanNhan);
             // TODO: This line of code loads data into the 'qLTTBCNTTDataSet.DM_ThietBi' table. You can move, or remove it, as needed.
             //this.dM_ThietBiTableAdapter.Fill(this.qLTTBCNTTDataSet.DM_ThietBi);
             Reload();
@@ -37,6 +42,7 @@ namespace QLTTBCNTT_WinForm
             dtgvTB.Columns[9].HeaderText = "ID cá nhân được biên chế";
             dtgvTB.Columns[10].HeaderText = "ID đơn vị được biên chế";
         }
+
         #region Button Funcion
         private void AddTB_Click(object sender, EventArgs e)
         {
@@ -104,27 +110,30 @@ namespace QLTTBCNTT_WinForm
 
         #region Bổ trợ
 
-        private DMTB GetDMTB()
+        private Thietbi GetDMTB()
         {
             int idLTB = int.Parse(cbbIDLTB.Text);
-            int idQN = int.Parse(txtQN.Text);
-            int idDV = int.Parse(txtDonvi.Text);
-            DMTB DMTB = new DMTB(idLTB, idQN, idDV,
+            int idQN = int.Parse(cbbidQN.Text);
+            int idDV = int.Parse(cbbidDV.Text);
+            Thietbi DMTB = new Thietbi(idLTB, idQN, idDV,
                                 txtTenTB.Text, txtSeri.Text, txtMAC.Text, txtCoreCPU.Text,
                                 cbbRAM.Text, cbbHardDisk.Text, txtMonitor.Text);
             return DMTB;
         }
         private bool Input()
         {
-            if (txtTenTB.Text == "" || txtSeri.Text == "" || cbbIDLTB.Text == "") { return false; }
-            MessageBox.Show("Bạn cần nhập đủ trường Tên, Seri và Id loại thiết bị");
+            if (txtTenTB.Text == "" || txtSeri.Text == "" || cbbIDLTB.Text == "") { 
+                MessageBox.Show("Bạn cần nhập đủ trường Tên, Seri và Id loại thiết bị");
+                return false; }
             return true;
         }
         private void Clear()
         {
             cbbIDLTB.GetItemText(0);
             txtQN.Text = "";
+            cbbidQN.Text = "";
             txtDonvi.Text = "";
+            cbbidDV.Text = "";
             txtTenTB.Text = "";
             txtSeri.Text = "";
             txtMAC.Text = "";
@@ -150,8 +159,8 @@ namespace QLTTBCNTT_WinForm
         {
             var TB = dtgvTB.SelectedRows[0];
             cbbIDLTB.Text = TB.Cells[1].Value.ToString();
-            txtQN.Text = TB.Cells[9].Value.ToString();
-            txtDonvi.Text = TB.Cells[10].Value.ToString();
+            cbbidQN.Text = TB.Cells[9].Value.ToString();
+            cbbidDV.Text = TB.Cells[10].Value.ToString();
             txtTenTB.Text = TB.Cells[2].Value.ToString();
             txtSeri.Text = TB.Cells[3].Value.ToString();
             txtMAC.Text = TB.Cells[4].Value.ToString();
@@ -188,10 +197,45 @@ namespace QLTTBCNTT_WinForm
                     txtIDLTB.Text = "Thiết bị khác";
                     break;
             }
-        #endregion
-
         }
 
+        #endregion
 
+        private void ccbidQN_TextChanged(object sender, EventArgs e)
+        {
+            if (cbbidQN.Text != "")
+            {
+                txtQN.Text = QueryTB.getQN_Thietbi(cbbidQN.Text).Tables[0].Rows[0][0].ToString();
+                txtDonvi.Enabled = false;
+                cbbidDV.Enabled = false;
+                cbbidDV.Text = QueryTB.getQN_Thietbi(cbbidQN.Text).Tables[0].Rows[0][1].ToString();
+                //txtDonvi.Text = QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][0].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][1].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][2].ToString();
+            }
+        }
+
+        private void cbbidDV_TextChanged(object sender, EventArgs e)
+        {
+            if (cbbidDV.Text != "") txtDonvi.Text = QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][0].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][1].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][2].ToString();
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                txtQN.Clear(); cbbidQN.Text = "";
+                txtQN.Enabled = false;
+                cbbidQN.Enabled = false;
+                txtDonvi.Enabled = true;
+                cbbidDV.Enabled = true;
+            }
+            else
+            {
+                txtDonvi.Enabled = false;
+                cbbidDV.Enabled = false;
+                //txtDonvi.Clear(); cbbidDV.Text = "";
+                txtQN.Enabled = true;
+                cbbidQN.Enabled = true;
+            }
+        }
     }
 }

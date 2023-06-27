@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="QLTTBCNTTDataSet1" targetNamespace="http://tempuri.org/QLTTBCNTTDataSet1.xsd" xmlns:mstns="http://tempuri.org/QLTTBCNTTDataSet1.xsd" xmlns="http://tempuri.org/QLTTBCNTTDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="QLTTBCNTTDataSet2" targetNamespace="http://tempuri.org/QLTTBCNTTDataSet2.xsd" xmlns:mstns="http://tempuri.org/QLTTBCNTTDataSet2.xsd" xmlns="http://tempuri.org/QLTTBCNTTDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -73,7 +73,7 @@ SELECT IdDonvi, Doi, TieuDoan, LuDoan FROM DM_Donvi WHERE (IdDonvi = @IdDonvi)</
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="QLTTBCNTTDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLTTBCNTTDataSet1" msprop:Generator_DataSetName="QLTTBCNTTDataSet1">
+  <xs:element name="QLTTBCNTTDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="QLTTBCNTTDataSet2" msprop:Generator_DataSetName="QLTTBCNTTDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="DM_Donvi" msprop:Generator_RowEvHandlerName="DM_DonviRowChangeEventHandler" msprop:Generator_RowDeletedName="DM_DonviRowDeleted" msprop:Generator_RowDeletingName="DM_DonviRowDeleting" msprop:Generator_RowEvArgName="DM_DonviRowChangeEvent" msprop:Generator_TablePropName="DM_Donvi" msprop:Generator_RowChangedName="DM_DonviRowChanged" msprop:Generator_RowChangingName="DM_DonviRowChanging" msprop:Generator_TableClassName="DM_DonviDataTable" msprop:Generator_RowClassName="DM_DonviRow" msprop:Generator_TableVarName="tableDM_Donvi" msprop:Generator_UserTableName="DM_Donvi">

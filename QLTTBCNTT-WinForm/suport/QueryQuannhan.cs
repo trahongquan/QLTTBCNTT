@@ -124,5 +124,32 @@ namespace QLTTBCNTT_WinForm.suport
         }
         #endregion
 
+        #region query đơn vị theo id
+        public string getDV_Quannhan(string idDonvi)
+        {
+            DataSet bangDV = new DataSet();
+            string query = "select Doi, TieuDoan, LuDoan from DM_Donvi " +
+                            "where IdDonvi = " + idDonvi;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            string DV;
+            DV = bangDV.Tables[0].Rows[0][0].ToString() + ", " + bangDV.Tables[0].Rows[0][1].ToString() + ", " + bangDV.Tables[0].Rows[0][2].ToString();
+            return DV;
+        }
+        #endregion
+
     }
 }

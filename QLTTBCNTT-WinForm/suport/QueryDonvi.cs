@@ -55,7 +55,7 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlCMD = new SqlCommand(query, sqlConnection);
                 sqlCMD.Parameters.Add("@Doi", SqlDbType.NChar).Value = Donvi.Doi1;   // gan cu the
                 sqlCMD.Parameters.Add("@TieuDoan", SqlDbType.NChar).Value = Donvi.TieuDoan1;
-                sqlCMD.Parameters.Add("@LuDoan", SqlDbType.Char).Value = Donvi.LuDoan1;
+                sqlCMD.Parameters.Add("@LuDoan", SqlDbType.NChar).Value = Donvi.LuDoan1;
                 
                 sqlCMD.ExecuteNonQuery();
             }

@@ -11,3 +11,6 @@ D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\ob
 D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormMain.resources
 D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormTB.resources
 D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormQN.resources
+D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormDV.resources
+D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormTBDV.resources
+D:\VB2\2. Ki.II\8. THực tập CSDL\Code\QLTTBCNTT-WinForm\QLTTBCNTT-WinForm\obj\Debug\QLTTBCNTT_WinForm.FormTBQN.resources
