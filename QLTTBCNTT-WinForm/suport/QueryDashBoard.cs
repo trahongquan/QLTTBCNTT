@@ -185,6 +185,23 @@ namespace QLTTBCNTT_WinForm.suport
         #endregion
         #region Query Bảng rút gọn
 
+
+        public DataTable getDSLTB()
+        {
+            DataTable bangXM = new DataTable();
+
+            string query = "select * from DM_LoaiThietBi";
+            using (SqlConnection sqlConnection = ConnectionString.getConnection())
+            {
+                sqlConnection.Open();
+
+                dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+
+                dataAdapter.Fill(bangXM);   // dien du lieu vao bang
+                sqlConnection.Close();
+            }
+            return bangXM;
+        }
         public DataTable getDS(string s)
         {
             DataTable bangXM = new DataTable();

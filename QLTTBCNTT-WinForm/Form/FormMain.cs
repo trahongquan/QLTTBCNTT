@@ -32,11 +32,11 @@ namespace QLTTBCNTT_WinForm
                 {
                     //DisnableButton();
                     //Color color = SelectThemeColor();
+                    //btnCloseChildForm.Visible = true;
                     currentButton = (Button)btnSender;
                     //currentButton.BackColor = Color.Pink;
                     currentButton.ForeColor = Color.White;
                     currentButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                    //btnCloseChildForm.Visible = true;
                 }
             }
         }
@@ -76,7 +76,8 @@ namespace QLTTBCNTT_WinForm
 
         private void btnChildFormDMTB_Click(object sender, EventArgs e)
         {
-            //Không làm
+            FormDMLTB FormDMLTB = new FormDMLTB();
+            OpenChildForm(FormDMLTB, sender);
         }
 
         private void btnChildFormDV_Click(object sender, EventArgs e)
@@ -97,7 +98,6 @@ namespace QLTTBCNTT_WinForm
             OpenChildForm(DB, sender);
         }
         #endregion
-
 
     }
 }

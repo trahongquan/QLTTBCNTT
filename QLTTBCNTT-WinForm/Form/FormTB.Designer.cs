@@ -78,22 +78,22 @@ namespace QLTTBCNTT_WinForm
             // 
             // dtgvTB
             // 
-            this.dtgvTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtgvTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtgvTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dtgvTB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgvTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTB.Location = new System.Drawing.Point(13, 13);
+            this.dtgvTB.Location = new System.Drawing.Point(-1, 2);
             this.dtgvTB.Name = "dtgvTB";
             this.dtgvTB.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvTB.Size = new System.Drawing.Size(700, 555);
+            this.dtgvTB.Size = new System.Drawing.Size(655, 579);
             this.dtgvTB.TabIndex = 0;
             this.dtgvTB.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvTB_MouseClick);
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(735, 112);
+            this.label1.Location = new System.Drawing.Point(660, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 13);
             this.label1.TabIndex = 1;
@@ -101,9 +101,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label2
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(735, 152);
+            this.label2.Location = new System.Drawing.Point(660, 152);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 13);
             this.label2.TabIndex = 2;
@@ -111,8 +111,8 @@ namespace QLTTBCNTT_WinForm
             // 
             // AddTB
             // 
-            this.AddTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.AddTB.Location = new System.Drawing.Point(738, 46);
+            this.AddTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddTB.Location = new System.Drawing.Point(663, 46);
             this.AddTB.Name = "AddTB";
             this.AddTB.Size = new System.Drawing.Size(75, 23);
             this.AddTB.TabIndex = 3;
@@ -122,8 +122,8 @@ namespace QLTTBCNTT_WinForm
             // 
             // ModifyTB
             // 
-            this.ModifyTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ModifyTB.Location = new System.Drawing.Point(861, 45);
+            this.ModifyTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ModifyTB.Location = new System.Drawing.Point(768, 46);
             this.ModifyTB.Name = "ModifyTB";
             this.ModifyTB.Size = new System.Drawing.Size(75, 23);
             this.ModifyTB.TabIndex = 4;
@@ -133,8 +133,8 @@ namespace QLTTBCNTT_WinForm
             // 
             // DelTB
             // 
-            this.DelTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DelTB.Location = new System.Drawing.Point(981, 45);
+            this.DelTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DelTB.Location = new System.Drawing.Point(867, 46);
             this.DelTB.Name = "DelTB";
             this.DelTB.Size = new System.Drawing.Size(75, 23);
             this.DelTB.TabIndex = 5;
@@ -144,9 +144,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(735, 193);
+            this.label3.Location = new System.Drawing.Point(660, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 13);
             this.label3.TabIndex = 6;
@@ -154,9 +154,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(735, 238);
+            this.label4.Location = new System.Drawing.Point(660, 238);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 13);
             this.label4.TabIndex = 7;
@@ -164,9 +164,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label5
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(735, 291);
+            this.label5.Location = new System.Drawing.Point(660, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 8;
@@ -174,9 +174,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(735, 342);
+            this.label6.Location = new System.Drawing.Point(660, 342);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 13);
             this.label6.TabIndex = 9;
@@ -184,9 +184,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label7
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(735, 392);
+            this.label7.Location = new System.Drawing.Point(660, 392);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 10;
@@ -194,9 +194,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(735, 442);
+            this.label8.Location = new System.Drawing.Point(660, 442);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 13);
             this.label8.TabIndex = 11;
@@ -204,9 +204,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label9
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(738, 506);
+            this.label9.Location = new System.Drawing.Point(663, 506);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 12;
@@ -214,9 +214,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label10
             // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(738, 544);
+            this.label10.Location = new System.Drawing.Point(663, 544);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 13;
@@ -224,7 +224,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // cbbIDLTB
             // 
-            this.cbbIDLTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbIDLTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbIDLTB.FormattingEnabled = true;
             this.cbbIDLTB.Items.AddRange(new object[] {
             "",
@@ -234,7 +234,7 @@ namespace QLTTBCNTT_WinForm
             "4",
             "5",
             "6"});
-            this.cbbIDLTB.Location = new System.Drawing.Point(829, 109);
+            this.cbbIDLTB.Location = new System.Drawing.Point(754, 109);
             this.cbbIDLTB.Name = "cbbIDLTB";
             this.cbbIDLTB.Size = new System.Drawing.Size(41, 21);
             this.cbbIDLTB.TabIndex = 14;
@@ -242,65 +242,65 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtTenTB
             // 
-            this.txtTenTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenTB.Location = new System.Drawing.Point(829, 149);
+            this.txtTenTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTenTB.Location = new System.Drawing.Point(754, 149);
             this.txtTenTB.Name = "txtTenTB";
-            this.txtTenTB.Size = new System.Drawing.Size(259, 20);
+            this.txtTenTB.Size = new System.Drawing.Size(192, 20);
             this.txtTenTB.TabIndex = 15;
             // 
             // txtSeri
             // 
-            this.txtSeri.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtSeri.Location = new System.Drawing.Point(829, 190);
+            this.txtSeri.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSeri.Location = new System.Drawing.Point(754, 190);
             this.txtSeri.Name = "txtSeri";
-            this.txtSeri.Size = new System.Drawing.Size(259, 20);
+            this.txtSeri.Size = new System.Drawing.Size(192, 20);
             this.txtSeri.TabIndex = 16;
             // 
             // txtMAC
             // 
-            this.txtMAC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMAC.Location = new System.Drawing.Point(829, 235);
+            this.txtMAC.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMAC.Location = new System.Drawing.Point(754, 235);
             this.txtMAC.Name = "txtMAC";
-            this.txtMAC.Size = new System.Drawing.Size(259, 20);
+            this.txtMAC.Size = new System.Drawing.Size(192, 20);
             this.txtMAC.TabIndex = 17;
             // 
             // txtCoreCPU
             // 
-            this.txtCoreCPU.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtCoreCPU.Location = new System.Drawing.Point(829, 288);
+            this.txtCoreCPU.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtCoreCPU.Location = new System.Drawing.Point(754, 288);
             this.txtCoreCPU.Name = "txtCoreCPU";
-            this.txtCoreCPU.Size = new System.Drawing.Size(259, 20);
+            this.txtCoreCPU.Size = new System.Drawing.Size(192, 20);
             this.txtCoreCPU.TabIndex = 18;
             // 
             // txtMonitor
             // 
-            this.txtMonitor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMonitor.Location = new System.Drawing.Point(829, 439);
+            this.txtMonitor.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtMonitor.Location = new System.Drawing.Point(754, 439);
             this.txtMonitor.Name = "txtMonitor";
-            this.txtMonitor.Size = new System.Drawing.Size(259, 20);
+            this.txtMonitor.Size = new System.Drawing.Size(192, 20);
             this.txtMonitor.TabIndex = 20;
             // 
             // txtQN
             // 
-            this.txtQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtQN.Enabled = false;
-            this.txtQN.Location = new System.Drawing.Point(890, 503);
+            this.txtQN.Location = new System.Drawing.Point(815, 503);
             this.txtQN.Name = "txtQN";
-            this.txtQN.Size = new System.Drawing.Size(177, 20);
+            this.txtQN.Size = new System.Drawing.Size(131, 20);
             this.txtQN.TabIndex = 21;
             // 
             // txtDonvi
             // 
-            this.txtDonvi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDonvi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtDonvi.Enabled = false;
-            this.txtDonvi.Location = new System.Drawing.Point(890, 541);
+            this.txtDonvi.Location = new System.Drawing.Point(815, 541);
             this.txtDonvi.Name = "txtDonvi";
-            this.txtDonvi.Size = new System.Drawing.Size(177, 20);
+            this.txtDonvi.Size = new System.Drawing.Size(131, 20);
             this.txtDonvi.TabIndex = 22;
             // 
             // cbbRAM
             // 
-            this.cbbRAM.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbRAM.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbRAM.FormattingEnabled = true;
             this.cbbRAM.Items.AddRange(new object[] {
             "",
@@ -314,14 +314,14 @@ namespace QLTTBCNTT_WinForm
             "32GB",
             "48GB",
             "64GB"});
-            this.cbbRAM.Location = new System.Drawing.Point(829, 339);
+            this.cbbRAM.Location = new System.Drawing.Point(754, 339);
             this.cbbRAM.Name = "cbbRAM";
-            this.cbbRAM.Size = new System.Drawing.Size(259, 21);
+            this.cbbRAM.Size = new System.Drawing.Size(192, 21);
             this.cbbRAM.TabIndex = 23;
             // 
             // cbbHardDisk
             // 
-            this.cbbHardDisk.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbHardDisk.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbHardDisk.FormattingEnabled = true;
             this.cbbHardDisk.Items.AddRange(new object[] {
             "",
@@ -333,27 +333,27 @@ namespace QLTTBCNTT_WinForm
             "2TB",
             "3TB",
             "4TB"});
-            this.cbbHardDisk.Location = new System.Drawing.Point(829, 389);
+            this.cbbHardDisk.Location = new System.Drawing.Point(754, 389);
             this.cbbHardDisk.Name = "cbbHardDisk";
-            this.cbbHardDisk.Size = new System.Drawing.Size(259, 21);
+            this.cbbHardDisk.Size = new System.Drawing.Size(192, 21);
             this.cbbHardDisk.TabIndex = 24;
             // 
             // txtIDLTB
             // 
-            this.txtIDLTB.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtIDLTB.Location = new System.Drawing.Point(876, 109);
+            this.txtIDLTB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtIDLTB.Location = new System.Drawing.Point(801, 109);
             this.txtIDLTB.Name = "txtIDLTB";
-            this.txtIDLTB.Size = new System.Drawing.Size(212, 20);
+            this.txtIDLTB.Size = new System.Drawing.Size(145, 20);
             this.txtIDLTB.TabIndex = 25;
             // 
             // cbbidQN
             // 
-            this.cbbidQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbidQN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbidQN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMQuanNhanBindingSource1, "IDQuannhan", true));
             this.cbbidQN.DataSource = this.dMQuanNhanBindingSource;
             this.cbbidQN.DisplayMember = "IDQuannhan";
             this.cbbidQN.FormattingEnabled = true;
-            this.cbbidQN.Location = new System.Drawing.Point(829, 502);
+            this.cbbidQN.Location = new System.Drawing.Point(754, 502);
             this.cbbidQN.Name = "cbbidQN";
             this.cbbidQN.Size = new System.Drawing.Size(48, 21);
             this.cbbidQN.TabIndex = 26;
@@ -377,12 +377,12 @@ namespace QLTTBCNTT_WinForm
             // 
             // cbbidDV
             // 
-            this.cbbidDV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbidDV.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbidDV.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMDonviBindingSource1, "IdDonvi", true));
             this.cbbidDV.DataSource = this.dMDonviBindingSource;
             this.cbbidDV.DisplayMember = "IdDonvi";
             this.cbbidDV.FormattingEnabled = true;
-            this.cbbidDV.Location = new System.Drawing.Point(829, 544);
+            this.cbbidDV.Location = new System.Drawing.Point(754, 544);
             this.cbbidDV.Name = "cbbidDV";
             this.cbbidDV.Size = new System.Drawing.Size(48, 21);
             this.cbbidDV.TabIndex = 27;
@@ -406,9 +406,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // checkBox2
             // 
-            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(861, 473);
+            this.checkBox2.Location = new System.Drawing.Point(739, 475);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(144, 17);
             this.checkBox2.TabIndex = 29;
@@ -429,7 +429,7 @@ namespace QLTTBCNTT_WinForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 580);
+            this.ClientSize = new System.Drawing.Size(950, 580);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.cbbidDV);
             this.Controls.Add(this.cbbidQN);
