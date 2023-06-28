@@ -18,7 +18,7 @@ namespace QLTTBCNTT_WinForm.suport
         #endregion
 
         #region Các phương thức
-        public DataTable getDS_TBDonvi()
+        public DataTable getDS_TBQN()
         {
             DataTable bangXM = new DataTable();
             string query = "select * from TB_QN";// * se lay tat ca cac cot
@@ -120,7 +120,7 @@ namespace QLTTBCNTT_WinForm.suport
             }
         }
         #endregion
-        #region query TB, ĐV theo id
+        #region query TB, QN theo id
         public string getTBDV_idTB(string idTB)
         {
             DataSet bangTB = new DataSet();
@@ -145,11 +145,11 @@ namespace QLTTBCNTT_WinForm.suport
             DV = bangTB.Tables[0].Rows[0][0].ToString();
             return DV;
         }
-        public string getTBDV_idDV(string idDonvi)
+        public string getTBQN_idQN(string idQN)
         {
             DataSet bangDV = new DataSet();
-            string query = "select Doi, TieuDoan, LuDoan from DM_Donvi " +
-                            "where IdDonvi = " + idDonvi;
+            string query = "select Ten from DM_Quannhan " +
+                            "where IDQuannhan = " + idQN;
             try
             {
                 using (SqlConnection sqlConnection = ConnectionString.getConnection())
@@ -166,8 +166,33 @@ namespace QLTTBCNTT_WinForm.suport
 
             }
             string DV;
-            DV = bangDV.Tables[0].Rows[0][0].ToString() + ", " + bangDV.Tables[0].Rows[0][1].ToString() + ", " + bangDV.Tables[0].Rows[0][2].ToString();
+            DV = bangDV.Tables[0].Rows[0][0].ToString();
             return DV;
+        }
+
+        public string getTBQN_idTB_check(string idTB)
+        {
+            string kq = "";
+            DataSet bangDV = new DataSet();
+            string query = "select * from TB_Donvi where idThietbi = " + idTB;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                    kq = bangDV.Tables[0].Rows[0][0].ToString();
+                    return kq;
+                }
+            }
+            catch
+            {
+                //MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");
+                return kq;
+            }
         }
         #endregion
     }

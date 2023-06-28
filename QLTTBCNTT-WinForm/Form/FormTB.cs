@@ -23,12 +23,10 @@ namespace QLTTBCNTT_WinForm
 
         private void FormTB_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet1.DM_Donvi' table. You can move, or remove it, as needed.
-            this.dM_DonviTableAdapter.Fill(this.qLTTBCNTTDataSet1.DM_Donvi);
+            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet.DM_Donvi' table. You can move, or remove it, as needed.
+            this.dM_DonviTableAdapter.Fill(this.qLTTBCNTTDataSet.DM_Donvi);
             // TODO: This line of code loads data into the 'qLTTBCNTTDataSet_cbbIDQN_DMTB.DM_QuanNhan' table. You can move, or remove it, as needed.
             this.dM_QuanNhanTableAdapter.Fill(this.qLTTBCNTTDataSet_cbbIDQN_DMTB.DM_QuanNhan);
-            // TODO: This line of code loads data into the 'qLTTBCNTTDataSet.DM_ThietBi' table. You can move, or remove it, as needed.
-            //this.dM_ThietBiTableAdapter.Fill(this.qLTTBCNTTDataSet.DM_ThietBi);
             Reload();
             dtgvTB.Columns[0].HeaderText = "IDTB";
             dtgvTB.Columns[1].HeaderText = "ID Loại";
@@ -113,12 +111,13 @@ namespace QLTTBCNTT_WinForm
         private Thietbi GetDMTB()
         {
             int idLTB = int.Parse(cbbIDLTB.Text);
-            int idQN = int.Parse(cbbidQN.Text);
             int idDV = int.Parse(cbbidDV.Text);
+            int idQN = int.Parse(cbbidQN.Text);
             Thietbi DMTB = new Thietbi(idLTB, idQN, idDV,
                                 txtTenTB.Text, txtSeri.Text, txtMAC.Text, txtCoreCPU.Text,
                                 cbbRAM.Text, cbbHardDisk.Text, txtMonitor.Text);
             return DMTB;
+
         }
         private bool Input()
         {
@@ -209,7 +208,6 @@ namespace QLTTBCNTT_WinForm
                 txtDonvi.Enabled = false;
                 cbbidDV.Enabled = false;
                 cbbidDV.Text = QueryTB.getQN_Thietbi(cbbidQN.Text).Tables[0].Rows[0][1].ToString();
-                //txtDonvi.Text = QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][0].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][1].ToString() + ", " + QueryTB.getDV_Thietbi(cbbidDV.Text).Tables[0].Rows[0][2].ToString();
             }
         }
 
@@ -223,18 +221,19 @@ namespace QLTTBCNTT_WinForm
             if (checkBox2.Checked)
             {
                 txtQN.Clear(); cbbidQN.Text = "";
-                txtQN.Enabled = false;
-                cbbidQN.Enabled = false;
-                txtDonvi.Enabled = true;
-                cbbidDV.Enabled = true;
-            }
-            else
-            {
-                txtDonvi.Enabled = false;
-                cbbidDV.Enabled = false;
-                //txtDonvi.Clear(); cbbidDV.Text = "";
+                txtDonvi.Clear(); cbbidDV.Text = "";
                 txtQN.Enabled = true;
                 cbbidQN.Enabled = true;
+                txtDonvi.Enabled = true;
+                cbbidDV.Enabled = true;
+            } else
+            {
+                txtQN.Clear(); cbbidQN.Text = "";
+                txtDonvi.Clear(); cbbidDV.Text = "";
+                txtQN.Enabled = false;
+                cbbidQN.Enabled = false;
+                txtDonvi.Enabled = false;
+                cbbidDV.Enabled = false;
             }
         }
     }

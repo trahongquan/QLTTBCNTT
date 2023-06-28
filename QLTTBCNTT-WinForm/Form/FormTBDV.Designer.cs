@@ -235,6 +235,7 @@
             this.cbbIDTB.Size = new System.Drawing.Size(43, 21);
             this.cbbIDTB.TabIndex = 14;
             this.cbbIDTB.ValueMember = "IdThietBi";
+            this.cbbIDTB.SelectedIndexChanged += new System.EventHandler(this.cbbIDTB_SelectedIndexChanged);
             this.cbbIDTB.TextChanged += new System.EventHandler(this.cbbidTB_TextChanged);
             // 
             // dMThietBiBindingSource

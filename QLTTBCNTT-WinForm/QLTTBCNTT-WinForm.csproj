@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\FormTBDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,7 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\DMLoaiTB.cs" />
+    <Compile Include="Object\QLTB.cs" />
     <Compile Include="Object\Thietbi.cs" />
     <Compile Include="Object\Donvi.cs" />
     <Compile Include="Object\Quannhan.cs" />
@@ -105,6 +112,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTTBCNTTDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLTTBCNTTDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTBCNTTDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTBCNTTDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTBCNTTDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTBCNTTDataSet_cbbIDQN_DMTB.cs">
+      <DependentUpon>QLTTBCNTTDataSet_cbbIDQN_DMTB.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLTTBCNTTDataSet_cbbIDQN_DMTB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -115,13 +135,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTTBCNTTDataSet_TBDV_IDTB.xsd</DependentUpon>
     </Compile>
-    <Compile Include="QLTTBCNTT_WinForm\QLTTBCNTTDataSetTableAdapters\DM_ThietBiTableAdapter.cs" />
     <Compile Include="suport\ConnectionString.cs" />
+    <Compile Include="suport\QueryDashBoard.cs" />
     <Compile Include="suport\QueryDonvi.cs" />
     <Compile Include="suport\QueryQuannhan.cs" />
     <Compile Include="suport\QueryTB.cs" />
     <Compile Include="suport\QueryTBDonvi.cs" />
     <Compile Include="suport\QueryTBQN.cs" />
+    <EmbeddedResource Include="Form\Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\FormDV.resx">
       <DependentUpon>FormDV.cs</DependentUpon>
     </EmbeddedResource>
@@ -190,6 +213,28 @@
     </None>
     <None Include="QLTTBCNTTDataSet2.xss">
       <DependentUpon>QLTTBCNTTDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet3.xsc">
+      <DependentUpon>QLTTBCNTTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTBCNTTDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTBCNTTDataSet3.xss">
+      <DependentUpon>QLTTBCNTTDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet4.xsc">
+      <DependentUpon>QLTTBCNTTDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTBCNTTDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTBCNTTDataSet4.xss">
+      <DependentUpon>QLTTBCNTTDataSet4.xsd</DependentUpon>
     </None>
     <None Include="QLTTBCNTTDataSet_cbbIDQN_DMTB.xsc">
       <DependentUpon>QLTTBCNTTDataSet_cbbIDQN_DMTB.xsd</DependentUpon>

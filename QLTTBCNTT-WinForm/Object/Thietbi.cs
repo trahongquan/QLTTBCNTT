@@ -15,8 +15,9 @@ namespace QLTTBCNTT_WinForm.Object
         {
         }
 
-        public Thietbi(string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
+        public Thietbi(int idloaiTB, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
         {
+            this.idloaiTB = idloaiTB;
             TenTB = tenTB;
             Seri = seri;
             MAC = mAC;
@@ -26,9 +27,8 @@ namespace QLTTBCNTT_WinForm.Object
             Monitor = monitor;
         }
 
-        public Thietbi(/*int idThietbi,*/ int idloaiTB, int idQuannhan, int idDonvi, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
+        public Thietbi(int idloaiTB, int idQuannhan, int idDonvi, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
         {
-            //this.idThietbi = idThietbi;
             this.idloaiTB = idloaiTB;
             this.idQuannhan = idQuannhan;
             this.idDonvi = idDonvi;

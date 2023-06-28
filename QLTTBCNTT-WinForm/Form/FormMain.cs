@@ -90,6 +90,14 @@ namespace QLTTBCNTT_WinForm
             FormTBQN FormTBQN = new FormTBQN();
             OpenChildForm(FormTBQN, sender);
         }
+
+        private void Dashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard DB = new Dashboard();
+            OpenChildForm(DB, sender);
+        }
         #endregion
+
+
     }
 }

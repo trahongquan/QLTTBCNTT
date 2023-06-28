@@ -162,10 +162,20 @@ namespace QLTTBCNTT_WinForm
         {
             if (cbbIDTB.Text != "") txtTB.Text = QueryTBDV.getTBDV_idTB(cbbIDTB.Text);
         }
-
+        private void CheckIDTB_TBDV()
+        {
+            string ds = QueryTBDV.getTBDV_idTB_check(cbbIDTB.Text);
+            if (ds != "")
+            {
+                MessageBox.Show("Thiết bị đã được biên chế hoặc được cho mượn. Xin vui lòng chọn thiết bị khác!");
+                cbbIDTB.Text = "";
+                return;
+            }
+        }
+        private void cbbIDTB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CheckIDTB_TBDV();
+        }
         #endregion
-
-
-        
     }
 }

@@ -32,7 +32,6 @@ namespace QLTTBCNTT_WinForm
         {
             this.components = new System.ComponentModel.Container();
             this.dtgvTB = new System.Windows.Forms.DataGridView();
-            this.dMThietBiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.AddTB = new System.Windows.Forms.Button();
@@ -58,25 +57,28 @@ namespace QLTTBCNTT_WinForm
             this.cbbHardDisk = new System.Windows.Forms.ComboBox();
             this.txtIDLTB = new System.Windows.Forms.TextBox();
             this.cbbidQN = new System.Windows.Forms.ComboBox();
-            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dMQuanNhanBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qLTTBCNTTDataSet_cbbIDQN_DMTB = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet_cbbIDQN_DMTB();
+            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cbbidDV = new System.Windows.Forms.ComboBox();
+            this.dMDonviBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
             this.dMDonviBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLTTBCNTTDataSet1 = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet1();
-            this.dM_QuanNhanTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet_cbbIDQN_DMTBTableAdapters.DM_QuanNhanTableAdapter();
-            this.dM_DonviTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet1TableAdapters.DM_DonviTableAdapter();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.dM_QuanNhanTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet_cbbIDQN_DMTBTableAdapters.DM_QuanNhanTableAdapter();
+            this.dM_DonviTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters.DM_DonviTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet_cbbIDQN_DMTB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvTB
             // 
+            this.dtgvTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgvTB.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dtgvTB.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.dtgvTB.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -89,6 +91,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(735, 112);
             this.label1.Name = "label1";
@@ -98,6 +101,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(735, 152);
             this.label2.Name = "label2";
@@ -107,6 +111,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // AddTB
             // 
+            this.AddTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddTB.Location = new System.Drawing.Point(738, 46);
             this.AddTB.Name = "AddTB";
             this.AddTB.Size = new System.Drawing.Size(75, 23);
@@ -117,6 +122,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // ModifyTB
             // 
+            this.ModifyTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ModifyTB.Location = new System.Drawing.Point(861, 45);
             this.ModifyTB.Name = "ModifyTB";
             this.ModifyTB.Size = new System.Drawing.Size(75, 23);
@@ -127,6 +133,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // DelTB
             // 
+            this.DelTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DelTB.Location = new System.Drawing.Point(981, 45);
             this.DelTB.Name = "DelTB";
             this.DelTB.Size = new System.Drawing.Size(75, 23);
@@ -137,6 +144,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(735, 193);
             this.label3.Name = "label3";
@@ -146,6 +154,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(735, 238);
             this.label4.Name = "label4";
@@ -155,6 +164,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(735, 291);
             this.label5.Name = "label5";
@@ -164,6 +174,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(735, 342);
             this.label6.Name = "label6";
@@ -173,6 +184,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(735, 392);
             this.label7.Name = "label7";
@@ -182,6 +194,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(735, 442);
             this.label8.Name = "label8";
@@ -191,8 +204,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(738, 486);
+            this.label9.Location = new System.Drawing.Point(738, 506);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(91, 13);
             this.label9.TabIndex = 12;
@@ -200,8 +214,9 @@ namespace QLTTBCNTT_WinForm
             // 
             // label10
             // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(738, 530);
+            this.label10.Location = new System.Drawing.Point(738, 544);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(82, 13);
             this.label10.TabIndex = 13;
@@ -209,6 +224,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // cbbIDLTB
             // 
+            this.cbbIDLTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbIDLTB.FormattingEnabled = true;
             this.cbbIDLTB.Items.AddRange(new object[] {
             "",
@@ -226,6 +242,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtTenTB
             // 
+            this.txtTenTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTenTB.Location = new System.Drawing.Point(829, 149);
             this.txtTenTB.Name = "txtTenTB";
             this.txtTenTB.Size = new System.Drawing.Size(259, 20);
@@ -233,6 +250,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtSeri
             // 
+            this.txtSeri.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSeri.Location = new System.Drawing.Point(829, 190);
             this.txtSeri.Name = "txtSeri";
             this.txtSeri.Size = new System.Drawing.Size(259, 20);
@@ -240,6 +258,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtMAC
             // 
+            this.txtMAC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMAC.Location = new System.Drawing.Point(829, 235);
             this.txtMAC.Name = "txtMAC";
             this.txtMAC.Size = new System.Drawing.Size(259, 20);
@@ -247,6 +266,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtCoreCPU
             // 
+            this.txtCoreCPU.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCoreCPU.Location = new System.Drawing.Point(829, 288);
             this.txtCoreCPU.Name = "txtCoreCPU";
             this.txtCoreCPU.Size = new System.Drawing.Size(259, 20);
@@ -254,6 +274,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtMonitor
             // 
+            this.txtMonitor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtMonitor.Location = new System.Drawing.Point(829, 439);
             this.txtMonitor.Name = "txtMonitor";
             this.txtMonitor.Size = new System.Drawing.Size(259, 20);
@@ -261,24 +282,28 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtQN
             // 
+            this.txtQN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtQN.Enabled = false;
-            this.txtQN.Location = new System.Drawing.Point(890, 483);
+            this.txtQN.Location = new System.Drawing.Point(890, 503);
             this.txtQN.Name = "txtQN";
-            this.txtQN.Size = new System.Drawing.Size(198, 20);
+            this.txtQN.Size = new System.Drawing.Size(177, 20);
             this.txtQN.TabIndex = 21;
             // 
             // txtDonvi
             // 
+            this.txtDonvi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDonvi.Enabled = false;
-            this.txtDonvi.Location = new System.Drawing.Point(890, 527);
+            this.txtDonvi.Location = new System.Drawing.Point(890, 541);
             this.txtDonvi.Name = "txtDonvi";
             this.txtDonvi.Size = new System.Drawing.Size(177, 20);
             this.txtDonvi.TabIndex = 22;
             // 
             // cbbRAM
             // 
+            this.cbbRAM.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbRAM.FormattingEnabled = true;
             this.cbbRAM.Items.AddRange(new object[] {
+            "",
             "4GB",
             "8GB",
             "12GB",
@@ -296,8 +321,10 @@ namespace QLTTBCNTT_WinForm
             // 
             // cbbHardDisk
             // 
+            this.cbbHardDisk.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbHardDisk.FormattingEnabled = true;
             this.cbbHardDisk.Items.AddRange(new object[] {
+            "",
             "64GB",
             "128GB",
             "256GB",
@@ -313,6 +340,7 @@ namespace QLTTBCNTT_WinForm
             // 
             // txtIDLTB
             // 
+            this.txtIDLTB.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIDLTB.Location = new System.Drawing.Point(876, 109);
             this.txtIDLTB.Name = "txtIDLTB";
             this.txtIDLTB.Size = new System.Drawing.Size(212, 20);
@@ -320,49 +348,74 @@ namespace QLTTBCNTT_WinForm
             // 
             // cbbidQN
             // 
-            this.cbbidQN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMQuanNhanBindingSource, "IDQuannhan", true));
+            this.cbbidQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbidQN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMQuanNhanBindingSource1, "IDQuannhan", true));
             this.cbbidQN.DataSource = this.dMQuanNhanBindingSource;
             this.cbbidQN.DisplayMember = "IDQuannhan";
             this.cbbidQN.FormattingEnabled = true;
-            this.cbbidQN.Location = new System.Drawing.Point(829, 482);
+            this.cbbidQN.Location = new System.Drawing.Point(829, 502);
             this.cbbidQN.Name = "cbbidQN";
             this.cbbidQN.Size = new System.Drawing.Size(48, 21);
             this.cbbidQN.TabIndex = 26;
             this.cbbidQN.ValueMember = "IDQuannhan";
             this.cbbidQN.TextChanged += new System.EventHandler(this.ccbidQN_TextChanged);
             // 
-            // dMQuanNhanBindingSource
+            // dMQuanNhanBindingSource1
             // 
-            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
-            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet_cbbIDQN_DMTB;
+            this.dMQuanNhanBindingSource1.DataMember = "DM_QuanNhan";
+            this.dMQuanNhanBindingSource1.DataSource = this.qLTTBCNTTDataSet_cbbIDQN_DMTB;
             // 
             // qLTTBCNTTDataSet_cbbIDQN_DMTB
             // 
             this.qLTTBCNTTDataSet_cbbIDQN_DMTB.DataSetName = "QLTTBCNTTDataSet_cbbIDQN_DMTB";
             this.qLTTBCNTTDataSet_cbbIDQN_DMTB.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // dMQuanNhanBindingSource
+            // 
+            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
+            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet_cbbIDQN_DMTB;
+            // 
             // cbbidDV
             // 
-            this.cbbidDV.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMDonviBindingSource, "IdDonvi", true));
+            this.cbbidDV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbidDV.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMDonviBindingSource1, "IdDonvi", true));
             this.cbbidDV.DataSource = this.dMDonviBindingSource;
             this.cbbidDV.DisplayMember = "IdDonvi";
             this.cbbidDV.FormattingEnabled = true;
-            this.cbbidDV.Location = new System.Drawing.Point(829, 530);
+            this.cbbidDV.Location = new System.Drawing.Point(829, 544);
             this.cbbidDV.Name = "cbbidDV";
             this.cbbidDV.Size = new System.Drawing.Size(48, 21);
             this.cbbidDV.TabIndex = 27;
             this.cbbidDV.ValueMember = "IdDonvi";
             this.cbbidDV.TextChanged += new System.EventHandler(this.cbbidDV_TextChanged);
             // 
+            // dMDonviBindingSource1
+            // 
+            this.dMDonviBindingSource1.DataMember = "DM_Donvi";
+            this.dMDonviBindingSource1.DataSource = this.qLTTBCNTTDataSet;
+            // 
+            // qLTTBCNTTDataSet
+            // 
+            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
+            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dMDonviBindingSource
             // 
             this.dMDonviBindingSource.DataMember = "DM_Donvi";
-            this.dMDonviBindingSource.DataSource = this.qLTTBCNTTDataSet1;
+            this.dMDonviBindingSource.DataSource = this.qLTTBCNTTDataSet;
             // 
-            // qLTTBCNTTDataSet1
+            // checkBox2
             // 
-            this.qLTTBCNTTDataSet1.DataSetName = "QLTTBCNTTDataSet1";
-            this.qLTTBCNTTDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.checkBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(861, 473);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(144, 17);
+            this.checkBox2.TabIndex = 29;
+            this.checkBox2.Text = "biên chế hoặc cho mượn";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.Visible = false;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // dM_QuanNhanTableAdapter
             // 
@@ -372,33 +425,12 @@ namespace QLTTBCNTT_WinForm
             // 
             this.dM_DonviTableAdapter.ClearBeforeFill = true;
             // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(0, 0);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
-            this.checkBox1.TabIndex = 28;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(1073, 530);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 29;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
             // FormTB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 580);
             this.Controls.Add(this.checkBox2);
-            this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.cbbidDV);
             this.Controls.Add(this.cbbidQN);
             this.Controls.Add(this.txtIDLTB);
@@ -430,12 +462,14 @@ namespace QLTTBCNTT_WinForm
             this.Text = "Danh mục quản lý thiết bị";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormTB_Load);
+            this.TextChanged += new System.EventHandler(this.ccbidQN_TextChanged);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet_cbbIDQN_DMTB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,8 +478,6 @@ namespace QLTTBCNTT_WinForm
         #endregion
 
         private DataGridView dtgvTB;
-        private BindingSource dMThietBiBindingSource;
-        private QLTTBCNTTDataSetTableAdapters.DM_ThietBiTableAdapter dM_ThietBiTableAdapter;
         private Label label1;
         private Label label2;
         private Button AddTB;
@@ -472,13 +504,14 @@ namespace QLTTBCNTT_WinForm
         private TextBox txtIDLTB;
         private ComboBox cbbidQN;
         private ComboBox cbbidDV;
+        private CheckBox checkBox2;
         private QLTTBCNTTDataSet_cbbIDQN_DMTB qLTTBCNTTDataSet_cbbIDQN_DMTB;
         private BindingSource dMQuanNhanBindingSource;
         private QLTTBCNTTDataSet_cbbIDQN_DMTBTableAdapters.DM_QuanNhanTableAdapter dM_QuanNhanTableAdapter;
-        private QLTTBCNTTDataSet1 qLTTBCNTTDataSet1;
+        private QLTTBCNTTDataSet qLTTBCNTTDataSet;
         private BindingSource dMDonviBindingSource;
-        private QLTTBCNTTDataSet1TableAdapters.DM_DonviTableAdapter dM_DonviTableAdapter;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private QLTTBCNTTDataSetTableAdapters.DM_DonviTableAdapter dM_DonviTableAdapter;
+        private BindingSource dMQuanNhanBindingSource1;
+        private BindingSource dMDonviBindingSource1;
     }
 }

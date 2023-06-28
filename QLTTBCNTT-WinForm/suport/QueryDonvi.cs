@@ -72,7 +72,7 @@ namespace QLTTBCNTT_WinForm.suport
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "UPDATE DM_Donvi SET " +
-                "Doi = @Doi, TieuDoan = @TieuDoan, LuDoan = @LuDoan" +
+                "Doi = @Doi, TieuDoan = @TieuDoan, LuDoan = @LuDoan " +
                 "Where IdDonvi = " + donviID;
 
             try

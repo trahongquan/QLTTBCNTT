@@ -41,19 +41,20 @@
             this.cbbCapbac = new System.Windows.Forms.ComboBox();
             this.cbbChucvu = new System.Windows.Forms.ComboBox();
             this.cbbDonvi = new System.Windows.Forms.ComboBox();
+            this.dMDonviBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
             this.txtCMTQD = new System.Windows.Forms.TextBox();
             this.txtTen = new System.Windows.Forms.TextBox();
-            this.qLTTBCNTTDataSet = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet();
-            this.dMDonviBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dM_DonviTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSetTableAdapters.DM_DonviTableAdapter();
             this.labDV = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQN)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvQN
             // 
+            this.dtgvQN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtgvQN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvQN.Location = new System.Drawing.Point(13, 13);
             this.dtgvQN.Name = "dtgvQN";
@@ -64,6 +65,7 @@
             // 
             // AddQN
             // 
+            this.AddQN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.AddQN.Location = new System.Drawing.Point(763, 42);
             this.AddQN.Name = "AddQN";
             this.AddQN.Size = new System.Drawing.Size(75, 23);
@@ -74,6 +76,7 @@
             // 
             // ModifyQN
             // 
+            this.ModifyQN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ModifyQN.Location = new System.Drawing.Point(874, 41);
             this.ModifyQN.Name = "ModifyQN";
             this.ModifyQN.Size = new System.Drawing.Size(75, 23);
@@ -84,6 +87,7 @@
             // 
             // DelQN
             // 
+            this.DelQN.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DelQN.Location = new System.Drawing.Point(985, 41);
             this.DelQN.Name = "DelQN";
             this.DelQN.Size = new System.Drawing.Size(75, 23);
@@ -94,6 +98,7 @@
             // 
             // lable1
             // 
+            this.lable1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lable1.AutoSize = true;
             this.lable1.Location = new System.Drawing.Point(763, 98);
             this.lable1.Name = "lable1";
@@ -103,6 +108,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(763, 141);
             this.label2.Name = "label2";
@@ -112,6 +118,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(763, 183);
             this.label3.Name = "label3";
@@ -121,6 +128,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(763, 229);
             this.label4.Name = "label4";
@@ -130,6 +138,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(763, 276);
             this.label5.Name = "label5";
@@ -139,6 +148,7 @@
             // 
             // cbbCapbac
             // 
+            this.cbbCapbac.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbCapbac.FormattingEnabled = true;
             this.cbbCapbac.Items.AddRange(new object[] {
             "Thiếu úy",
@@ -163,6 +173,7 @@
             // 
             // cbbChucvu
             // 
+            this.cbbChucvu.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbChucvu.FormattingEnabled = true;
             this.cbbChucvu.Items.AddRange(new object[] {
             "Chiến đấu viên",
@@ -180,6 +191,7 @@
             // 
             // cbbDonvi
             // 
+            this.cbbDonvi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbbDonvi.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMDonviBindingSource, "IdDonvi", true));
             this.cbbDonvi.DataSource = this.dMDonviBindingSource;
             this.cbbDonvi.DisplayMember = "IdDonvi";
@@ -191,8 +203,19 @@
             this.cbbDonvi.ValueMember = "IdDonvi";
             this.cbbDonvi.TextChanged += new System.EventHandler(this.cbbDonvi_TextChanged);
             // 
+            // dMDonviBindingSource
+            // 
+            this.dMDonviBindingSource.DataMember = "DM_Donvi";
+            this.dMDonviBindingSource.DataSource = this.qLTTBCNTTDataSet;
+            // 
+            // qLTTBCNTTDataSet
+            // 
+            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
+            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtCMTQD
             // 
+            this.txtCMTQD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtCMTQD.Location = new System.Drawing.Point(828, 95);
             this.txtCMTQD.Name = "txtCMTQD";
             this.txtCMTQD.Size = new System.Drawing.Size(232, 20);
@@ -200,20 +223,11 @@
             // 
             // txtTen
             // 
+            this.txtTen.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTen.Location = new System.Drawing.Point(828, 138);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(232, 20);
             this.txtTen.TabIndex = 13;
-            // 
-            // qLTTBCNTTDataSet
-            // 
-            this.qLTTBCNTTDataSet.DataSetName = "QLTTBCNTTDataSet";
-            this.qLTTBCNTTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dMDonviBindingSource
-            // 
-            this.dMDonviBindingSource.DataMember = "DM_Donvi";
-            this.dMDonviBindingSource.DataSource = this.qLTTBCNTTDataSet;
             // 
             // dM_DonviTableAdapter
             // 
@@ -221,6 +235,7 @@
             // 
             // labDV
             // 
+            this.labDV.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labDV.Enabled = false;
             this.labDV.Location = new System.Drawing.Point(871, 273);
             this.labDV.Name = "labDV";
@@ -253,8 +268,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormQN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvQN)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dMDonviBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

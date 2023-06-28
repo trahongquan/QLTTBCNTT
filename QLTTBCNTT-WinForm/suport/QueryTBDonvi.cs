@@ -71,15 +71,15 @@ namespace QLTTBCNTT_WinForm.suport
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
             string query = "UPDATE TB_Donvi SET " +
-                "IdDV=@IdDV, IdTB=@IdTB, DateBorrow=@DateBorrow, DateReturn=@DateReturn" +
-                "Where IdThieBi = " + IdTBDonvi;
+                "idDonvi=@idDonvi, idThietbi=@idThietbi, DateBorrow=@DateBorrow, DateReturn=@DateReturn " +
+                "Where IdTBDonvi = " + IdTBDonvi;
             try
             {
                 sqlConnection.Open();
 
                 sqlCMD = new SqlCommand(query, sqlConnection);
-                sqlCMD.Parameters.Add("@IdDV", SqlDbType.Int).Value = TBDV.IdDV;   // gan cu the
-                sqlCMD.Parameters.Add("@IdTB", SqlDbType.NChar).Value = TBDV.IdTB;
+                sqlCMD.Parameters.Add("@idDonvi", SqlDbType.Int).Value = TBDV.IdDV;   // gan cu the
+                sqlCMD.Parameters.Add("@idThietbi", SqlDbType.NChar).Value = TBDV.IdTB;
                 sqlCMD.Parameters.Add("@DateBorrow", SqlDbType.NChar).Value = TBDV.DateBorrow1;
                 sqlCMD.Parameters.Add("@DateReturn", SqlDbType.NChar).Value = TBDV.DateReturn1;
 
@@ -98,7 +98,7 @@ namespace QLTTBCNTT_WinForm.suport
         public void Delete(int IdTBDonvi)    // xoa theo ma
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
-            string query = "Delete DM_Donvi Where IdTBDonvi = @IdTBDonvi";
+            string query = "Delete TB_Donvi Where IdTBDonvi = @IdTBDonvi";
 
             try
             {
@@ -169,6 +169,31 @@ namespace QLTTBCNTT_WinForm.suport
             string DV;
             DV = bangDV.Tables[0].Rows[0][0].ToString() + ", " + bangDV.Tables[0].Rows[0][1].ToString() + ", " + bangDV.Tables[0].Rows[0][2].ToString();
             return DV;
+        }
+
+        public string getTBDV_idTB_check(string idTB)
+        {
+            string kq = "";
+            DataSet bangDV = new DataSet();
+            string query = "select * from TB_QN where idThietbi = " + idTB;
+            try
+            {
+                using (SqlConnection sqlConnection = ConnectionString.getConnection())
+                {
+                    sqlConnection.Open();
+                    dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+                    dataAdapter.Fill(bangDV);   // dien du lieu vao bang
+                    sqlConnection.Close();
+                    kq = bangDV.Tables[0].Rows[0][0].ToString();
+                    return kq;
+                }
+            }
+            catch
+            {
+                //MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Thiết bị hợp lệ, chưa được biên chế hoặc cho mượn");
+                return kq;
+            }
         }
         #endregion
     }

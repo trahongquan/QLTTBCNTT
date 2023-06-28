@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace QLTTBCNTT_WinForm.suport
 {
-    internal class QueryTB
+    internal class QueryDashBoard
     {
         #region Cac thuoc tinh
         SqlDataAdapter dataAdapter;     // xuat du lieu vao bang
@@ -18,7 +18,7 @@ namespace QLTTBCNTT_WinForm.suport
         #endregion
 
         #region Các phương thức
-        public DataTable getDS_Thietbi()
+        public DataTable getDSTB()
         {
             DataTable bangXM = new DataTable();
             string query = "select * from DM_ThietBi";// * se lay tat ca cac cot
@@ -92,7 +92,7 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlCMD.Parameters.Add("@RAM", SqlDbType.NChar).Value = Thietbi.RAM1;
                 sqlCMD.Parameters.Add("@HardDisk", SqlDbType.NChar).Value = Thietbi.HardDisk1;
                 sqlCMD.Parameters.Add("@Monitor", SqlDbType.NChar).Value = Thietbi.Monitor1;
-                if(Thietbi.IdQuannhan.ToString() != "") sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = Thietbi.IdQuannhan;
+                if (Thietbi.IdQuannhan.ToString() != "") sqlCMD.Parameters.Add("@idQuannhan", SqlDbType.Int).Value = Thietbi.IdQuannhan;
                 if (Thietbi.IdDonvi.ToString() != "") sqlCMD.Parameters.Add("@idDonvi", SqlDbType.Int).Value = Thietbi.IdDonvi;
 
 
@@ -107,6 +107,7 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlConnection.Close();
             }
         }
+
         public void Delete(int IdThieBi)    // xoa theo ma
         {
             SqlConnection sqlConnection = ConnectionString.getConnection();
@@ -132,7 +133,6 @@ namespace QLTTBCNTT_WinForm.suport
             }
         }
         #endregion
-
         #region query QN, ĐV theo id
         public DataSet getQN_Thietbi(string idQN)
         {
@@ -154,10 +154,10 @@ namespace QLTTBCNTT_WinForm.suport
                 MessageBox.Show("Lỗi kết nối đến Cơ sở dữ liệu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
-            
+
             return bangDV;
         }
-        
+
         public DataSet getDV_Thietbi(string idDonvi)
         {
             DataSet bangDV = new DataSet();
@@ -183,34 +183,35 @@ namespace QLTTBCNTT_WinForm.suport
             return bangDV;
         }
         #endregion
+        #region Query Bảng rút gọn
 
-        #region Tìm kiếm
-        /*public DataTable getDS_TB(byte i, string st)
+        public DataTable getDS(string s)
         {
             DataTable bangXM = new DataTable();
 
-            string query = "select * from DM_ThietBi WHERE ";// * se lay tat ca cac cot
-
-            switch (i)
+            string query = s;
+            using (SqlConnection sqlConnection = ConnectionString.getConnection())
             {
-                case 1:
-                    query += "TenTB like N'%";
-                    break;
-                case 2:
-                    query += "ID like '%";
-                    break;
-                case 3:
-                    query += "CCCD like '%";
-                    break;
-                case 4:
-                    query += "SoTheDang like '%";
-                    break;
-                case 5:
-                    query += "SoTheQN like '%";
-                    break;
-            }
+                sqlConnection.Open();
 
-            query += st + "%'";
+                dataAdapter = new SqlDataAdapter(query, sqlConnection); //tao 1 ket noi CSDL moi
+
+                dataAdapter.Fill(bangXM);   // dien du lieu vao bang
+                sqlConnection.Close();
+            }
+            return bangXM;
+        }
+        public DataTable Search(string col, string st)
+        {
+            DataTable bangXM = new DataTable();
+
+            string query = "select TB.TenTB, LTB.loai, QN.Ten, DV.Doi, DV.TieuDoan, DV.LuDoan " +
+                            "From DM_ThietBi As TB, DM_LoaiThietBi As LTB, DM_Quannhan As QN, DM_Donvi As DV " +
+                            "WHERE TB.idLoaiTB = LTB.IdLoaiTB And TB.idQuannhan = QN.IDQuannhan and TB.idDonvi = DV.IdDonvi and ";
+
+                    query += col;
+                    query += " like N'%";
+                    query += st + "%'";
 
             using (SqlConnection sqlConnection = ConnectionString.getConnection())
             {
@@ -222,7 +223,7 @@ namespace QLTTBCNTT_WinForm.suport
                 sqlConnection.Close();
             }
             return bangXM;
-        }*/
+        }
         #endregion
     }
 }

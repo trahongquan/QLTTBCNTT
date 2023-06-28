@@ -28,125 +28,251 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dtgvTBQN = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DelTBQN = new System.Windows.Forms.Button();
+            this.ModifyTBQN = new System.Windows.Forms.Button();
+            this.AddTBQN = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbbIDQN = new System.Windows.Forms.ComboBox();
+            this.dMQuanNhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet3 = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet3();
+            this.cbbIDTB = new System.Windows.Forms.ComboBox();
+            this.dMThietBiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLTTBCNTTDataSet4 = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet4();
+            this.txtTB = new System.Windows.Forms.TextBox();
+            this.txtQN = new System.Windows.Forms.TextBox();
+            this.DateBorrow = new System.Windows.Forms.DateTimePicker();
+            this.DateReturn = new System.Windows.Forms.DateTimePicker();
+            this.dM_QuanNhanTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet3TableAdapters.DM_QuanNhanTableAdapter();
+            this.dM_ThietBiTableAdapter = new QLTTBCNTT_WinForm.QLTTBCNTTDataSet4TableAdapters.DM_ThietBiTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTBQN)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet4)).BeginInit();
             this.SuspendLayout();
             // 
             // dtgvTBQN
             // 
+            this.dtgvTBQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtgvTBQN.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dtgvTBQN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvTBQN.Location = new System.Drawing.Point(13, 13);
             this.dtgvTBQN.Name = "dtgvTBQN";
-            this.dtgvTBQN.Size = new System.Drawing.Size(447, 425);
+            this.dtgvTBQN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvTBQN.Size = new System.Drawing.Size(554, 425);
             this.dtgvTBQN.TabIndex = 0;
+            this.dtgvTBQN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvTBQN_MouseClick);
             // 
-            // button1
+            // DelTBQN
             // 
-            this.button1.Location = new System.Drawing.Point(696, 47);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.DelTBQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DelTBQN.Location = new System.Drawing.Point(795, 48);
+            this.DelTBQN.Name = "DelTBQN";
+            this.DelTBQN.Size = new System.Drawing.Size(75, 23);
+            this.DelTBQN.TabIndex = 1;
+            this.DelTBQN.Text = "Xóa";
+            this.DelTBQN.UseVisualStyleBackColor = true;
+            this.DelTBQN.Click += new System.EventHandler(this.DelTBQN_Click);
             // 
-            // button2
+            // ModifyTBQN
             // 
-            this.button2.Location = new System.Drawing.Point(593, 47);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.ModifyTBQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ModifyTBQN.Location = new System.Drawing.Point(692, 48);
+            this.ModifyTBQN.Name = "ModifyTBQN";
+            this.ModifyTBQN.Size = new System.Drawing.Size(75, 23);
+            this.ModifyTBQN.TabIndex = 2;
+            this.ModifyTBQN.Text = "Sửa";
+            this.ModifyTBQN.UseVisualStyleBackColor = true;
+            this.ModifyTBQN.Click += new System.EventHandler(this.ModifyTBQN_Click);
             // 
-            // button3
+            // AddTBQN
             // 
-            this.button3.Location = new System.Drawing.Point(492, 47);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.AddTBQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.AddTBQN.Location = new System.Drawing.Point(591, 48);
+            this.AddTBQN.Name = "AddTBQN";
+            this.AddTBQN.Size = new System.Drawing.Size(75, 23);
+            this.AddTBQN.TabIndex = 3;
+            this.AddTBQN.Text = "Thêm";
+            this.AddTBQN.UseVisualStyleBackColor = true;
+            this.AddTBQN.Click += new System.EventHandler(this.AddTBQN_Click);
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(489, 120);
+            this.label1.Location = new System.Drawing.Point(588, 121);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(60, 13);
             this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.label1.Text = "Quân nhân";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(489, 163);
+            this.label2.Location = new System.Drawing.Point(588, 164);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.label2.Text = "Thiết bị";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(489, 202);
+            this.label3.Location = new System.Drawing.Point(588, 203);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(76, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "label3";
+            this.label3.Text = "Ngày biên chế";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(489, 241);
+            this.label4.Location = new System.Drawing.Point(588, 242);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.Size = new System.Drawing.Size(67, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "label4";
+            this.label4.Text = "Trả biên chế";
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(489, 281);
+            this.label5.Location = new System.Drawing.Point(588, 282);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.Size = new System.Drawing.Size(49, 13);
             this.label5.TabIndex = 8;
-            this.label5.Text = "label5";
+            this.label5.Text = "Tìm kiếm";
             // 
-            // comboBox1
+            // cbbIDQN
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(530, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 9;
+            this.cbbIDQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbIDQN.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMQuanNhanBindingSource, "IDQuannhan", true));
+            this.cbbIDQN.DataSource = this.dMQuanNhanBindingSource;
+            this.cbbIDQN.DisplayMember = "IDQuannhan";
+            this.cbbIDQN.FormattingEnabled = true;
+            this.cbbIDQN.Location = new System.Drawing.Point(669, 118);
+            this.cbbIDQN.Name = "cbbIDQN";
+            this.cbbIDQN.Size = new System.Drawing.Size(43, 21);
+            this.cbbIDQN.TabIndex = 10;
+            this.cbbIDQN.ValueMember = "IDQuannhan";
+            this.cbbIDQN.TextChanged += new System.EventHandler(this.ccbidQN_TextChanged);
+            // 
+            // dMQuanNhanBindingSource
+            // 
+            this.dMQuanNhanBindingSource.DataMember = "DM_QuanNhan";
+            this.dMQuanNhanBindingSource.DataSource = this.qLTTBCNTTDataSet3;
+            // 
+            // qLTTBCNTTDataSet3
+            // 
+            this.qLTTBCNTTDataSet3.DataSetName = "QLTTBCNTTDataSet3";
+            this.qLTTBCNTTDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cbbIDTB
+            // 
+            this.cbbIDTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbbIDTB.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.dMThietBiBindingSource, "IdThietBi", true));
+            this.cbbIDTB.DataSource = this.dMThietBiBindingSource;
+            this.cbbIDTB.DisplayMember = "IdThietBi";
+            this.cbbIDTB.FormattingEnabled = true;
+            this.cbbIDTB.Location = new System.Drawing.Point(669, 156);
+            this.cbbIDTB.Name = "cbbIDTB";
+            this.cbbIDTB.Size = new System.Drawing.Size(43, 21);
+            this.cbbIDTB.TabIndex = 11;
+            this.cbbIDTB.ValueMember = "IdThietBi";
+            this.cbbIDTB.SelectedIndexChanged += new System.EventHandler(this.cbbIDTB_SelectedIndexChanged);
+            this.cbbIDTB.TextChanged += new System.EventHandler(this.cbbidTB_TextChanged);
+            // 
+            // dMThietBiBindingSource
+            // 
+            this.dMThietBiBindingSource.DataMember = "DM_ThietBi";
+            this.dMThietBiBindingSource.DataSource = this.qLTTBCNTTDataSet4;
+            // 
+            // qLTTBCNTTDataSet4
+            // 
+            this.qLTTBCNTTDataSet4.DataSetName = "QLTTBCNTTDataSet4";
+            this.qLTTBCNTTDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtTB
+            // 
+            this.txtTB.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtTB.Enabled = false;
+            this.txtTB.Location = new System.Drawing.Point(719, 156);
+            this.txtTB.Name = "txtTB";
+            this.txtTB.Size = new System.Drawing.Size(151, 20);
+            this.txtTB.TabIndex = 12;
+            // 
+            // txtQN
+            // 
+            this.txtQN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtQN.Enabled = false;
+            this.txtQN.Location = new System.Drawing.Point(719, 118);
+            this.txtQN.Name = "txtQN";
+            this.txtQN.Size = new System.Drawing.Size(151, 20);
+            this.txtQN.TabIndex = 13;
+            // 
+            // DateBorrow
+            // 
+            this.DateBorrow.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateBorrow.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateBorrow.Location = new System.Drawing.Point(669, 197);
+            this.DateBorrow.Name = "DateBorrow";
+            this.DateBorrow.Size = new System.Drawing.Size(129, 20);
+            this.DateBorrow.TabIndex = 14;
+            // 
+            // DateReturn
+            // 
+            this.DateReturn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateReturn.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateReturn.Location = new System.Drawing.Point(669, 236);
+            this.DateReturn.Name = "DateReturn";
+            this.DateReturn.Size = new System.Drawing.Size(129, 20);
+            this.DateReturn.TabIndex = 15;
+            // 
+            // dM_QuanNhanTableAdapter
+            // 
+            this.dM_QuanNhanTableAdapter.ClearBeforeFill = true;
+            // 
+            // dM_ThietBiTableAdapter
+            // 
+            this.dM_ThietBiTableAdapter.ClearBeforeFill = true;
             // 
             // FormTBQN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(886, 451);
+            this.Controls.Add(this.DateReturn);
+            this.Controls.Add(this.DateBorrow);
+            this.Controls.Add(this.txtQN);
+            this.Controls.Add(this.txtTB);
+            this.Controls.Add(this.cbbIDTB);
+            this.Controls.Add(this.cbbIDQN);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.AddTBQN);
+            this.Controls.Add(this.ModifyTBQN);
+            this.Controls.Add(this.DelTBQN);
             this.Controls.Add(this.dtgvTBQN);
             this.Name = "FormTBQN";
             this.Text = "FormTBQN";
+            this.Load += new System.EventHandler(this.FormTBQN_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTBQN)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMQuanNhanBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dMThietBiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLTTBCNTTDataSet4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,14 +281,25 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgvTBQN;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DelTBQN;
+        private System.Windows.Forms.Button ModifyTBQN;
+        private System.Windows.Forms.Button AddTBQN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbbIDQN;
+        private System.Windows.Forms.ComboBox cbbIDTB;
+        private System.Windows.Forms.TextBox txtTB;
+        private System.Windows.Forms.TextBox txtQN;
+        private System.Windows.Forms.DateTimePicker DateBorrow;
+        private System.Windows.Forms.DateTimePicker DateReturn;
+        private QLTTBCNTTDataSet3 qLTTBCNTTDataSet3;
+        private System.Windows.Forms.BindingSource dMQuanNhanBindingSource;
+        private QLTTBCNTTDataSet3TableAdapters.DM_QuanNhanTableAdapter dM_QuanNhanTableAdapter;
+        private QLTTBCNTTDataSet4 qLTTBCNTTDataSet4;
+        private System.Windows.Forms.BindingSource dMThietBiBindingSource;
+        private QLTTBCNTTDataSet4TableAdapters.DM_ThietBiTableAdapter dM_ThietBiTableAdapter;
     }
 }
