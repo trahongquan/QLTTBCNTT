@@ -19,7 +19,6 @@ namespace QLTTBCNTT_WinForm
         {
             InitializeComponent();
         }
-
         private void FormDV_Load(object sender, EventArgs e)
         {
             Reload();
@@ -28,6 +27,7 @@ namespace QLTTBCNTT_WinForm
             dtgvDV.Columns[2].HeaderText = "Tiểu đoàn";
             dtgvDV.Columns[3].HeaderText = "Lữ đoàn";
         }
+
 
         #region Button Funcion
         private void AddDV_Click(object sender, EventArgs e)

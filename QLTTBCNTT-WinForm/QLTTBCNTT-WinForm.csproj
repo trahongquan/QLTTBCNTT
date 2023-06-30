@@ -113,7 +113,6 @@
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Object\DMLoaiTB.cs" />
-    <Compile Include="Object\QLTB.cs" />
     <Compile Include="Object\Thietbi.cs" />
     <Compile Include="Object\Donvi.cs" />
     <Compile Include="Object\Quannhan.cs" />
@@ -146,6 +145,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTTBCNTTDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="QLTTBCNTTDataSet51.cs">
+      <DependentUpon>QLTTBCNTTDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTBCNTTDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTBCNTTDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTBCNTTDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTBCNTTDataSet61.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLTTBCNTTDataSet_cbbIDQN_DMTB.cs">
       <DependentUpon>QLTTBCNTTDataSet_cbbIDQN_DMTB.xsd</DependentUpon>
     </Compile>
@@ -164,6 +176,11 @@
     </Compile>
     <Compile Include="Form\Report.Designer.cs">
       <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QLTTBCNTTReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTTBCNTTReport.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="suport\ConnectionString.cs" />
@@ -210,6 +227,7 @@
     <EmbeddedResource Include="Form\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -275,6 +293,28 @@
     <None Include="QLTTBCNTTDataSet4.xss">
       <DependentUpon>QLTTBCNTTDataSet4.xsd</DependentUpon>
     </None>
+    <None Include="QLTTBCNTTDataSet51.xsc">
+      <DependentUpon>QLTTBCNTTDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTBCNTTDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTBCNTTDataSet51.xss">
+      <DependentUpon>QLTTBCNTTDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet61.xsc">
+      <DependentUpon>QLTTBCNTTDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTBCNTTDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTBCNTTDataSet61.xss">
+      <DependentUpon>QLTTBCNTTDataSet61.xsd</DependentUpon>
+    </None>
     <None Include="QLTTBCNTTDataSet_cbbIDQN_DMTB.xsc">
       <DependentUpon>QLTTBCNTTDataSet_cbbIDQN_DMTB.xsd</DependentUpon>
     </None>
@@ -296,6 +336,17 @@
     </None>
     <None Include="QLTTBCNTTDataSet_TBDV_IDTB.xss">
       <DependentUpon>QLTTBCNTTDataSet_TBDV_IDTB.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTReport.xsc">
+      <DependentUpon>QLTTBCNTTReport.xsd</DependentUpon>
+    </None>
+    <None Include="QLTTBCNTTReport.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTTBCNTTReport.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTTBCNTTReport.xss">
+      <DependentUpon>QLTTBCNTTReport.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

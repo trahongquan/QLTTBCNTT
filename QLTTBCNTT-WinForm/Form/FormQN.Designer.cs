@@ -58,7 +58,7 @@
             this.dtgvQN.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvQN.Location = new System.Drawing.Point(8, 12);
             this.dtgvQN.Name = "dtgvQN";
-            this.dtgvQN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvQN.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dtgvQN.Size = new System.Drawing.Size(585, 526);
             this.dtgvQN.TabIndex = 0;
             this.dtgvQN.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dtgvQN_MouseClick);

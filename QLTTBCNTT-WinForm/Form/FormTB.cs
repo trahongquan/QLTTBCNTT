@@ -29,7 +29,7 @@ namespace QLTTBCNTT_WinForm
             this.dM_QuanNhanTableAdapter.Fill(this.qLTTBCNTTDataSet_cbbIDQN_DMTB.DM_QuanNhan);
             Reload();
             dtgvTB.Columns[0].HeaderText = "IDTB";
-            dtgvTB.Columns[1].HeaderText = "ID Loại";
+            dtgvTB.Columns[1].HeaderText = "Loại";
             dtgvTB.Columns[2].HeaderText = "Tên";
             dtgvTB.Columns[3].HeaderText = "Số Seri";
             dtgvTB.Columns[4].HeaderText = "MAC";
@@ -37,8 +37,8 @@ namespace QLTTBCNTT_WinForm
             dtgvTB.Columns[6].HeaderText = "RAM";
             dtgvTB.Columns[7].HeaderText = "HardDisk";
             dtgvTB.Columns[8].HeaderText = "Màn hình";
-            dtgvTB.Columns[9].HeaderText = "ID cá nhân được biên chế";
-            dtgvTB.Columns[10].HeaderText = "ID đơn vị được biên chế";
+            dtgvTB.Columns[9].HeaderText = "IDQN";
+            dtgvTB.Columns[10].HeaderText = "IDDV";
         }
 
         #region Button Funcion
@@ -200,6 +200,7 @@ namespace QLTTBCNTT_WinForm
 
         #endregion
 
+        #region TextChanged
         private void ccbidQN_TextChanged(object sender, EventArgs e)
         {
             if (cbbidQN.Text != "")
@@ -236,5 +237,6 @@ namespace QLTTBCNTT_WinForm
                 cbbidDV.Enabled = false;
             }
         }
+        #endregion
     }
 }

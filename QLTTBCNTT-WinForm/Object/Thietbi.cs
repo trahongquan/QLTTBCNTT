@@ -15,9 +15,10 @@ namespace QLTTBCNTT_WinForm.Object
         {
         }
 
-        public Thietbi(int idloaiTB, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
+        public Thietbi(int idloaiTB, int idDonvi, string tenTB, string seri, string mAC, string coreCPU, string rAM, string hardDisk, string monitor)
         {
             this.idloaiTB = idloaiTB;
+            this.idDonvi = idDonvi;
             TenTB = tenTB;
             Seri = seri;
             MAC = mAC;

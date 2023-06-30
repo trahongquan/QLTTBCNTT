@@ -24,6 +24,8 @@ namespace QLTTBCNTT_WinForm
         {
 
         }
+
+        #region bổ trợ
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -55,6 +57,8 @@ namespace QLTTBCNTT_WinForm
             childForm.BringToFront();
             childForm.Show();
         }
+        #endregion
+
         #region button header
         private void btnChildFormTB_Click(object sender, EventArgs e)
         {

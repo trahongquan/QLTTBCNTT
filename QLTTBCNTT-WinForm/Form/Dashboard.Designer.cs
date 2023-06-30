@@ -57,6 +57,7 @@
             this.dtgvDashboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDashboard.Location = new System.Drawing.Point(2, 2);
             this.dtgvDashboard.Name = "dtgvDashboard";
+            this.dtgvDashboard.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgvDashboard.Size = new System.Drawing.Size(589, 572);
             this.dtgvDashboard.TabIndex = 0;
             // 
@@ -206,6 +207,7 @@
             this.btnReport.TabIndex = 14;
             this.btnReport.Text = "Báo cáo";
             this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // groupBox1
             // 
